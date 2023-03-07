@@ -1,0 +1,12 @@
+i {
+  display: inline-block;
+}
+
+.icon-dumbbell {
+  mask: url('../../assets/svg/dumbbell.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/dumbbell.svg') no-repeat;
+  width: 32px;
+  height: 32px;
+  mask-size: 32px;
+  -webkit-mask-size: 32px;
+}
