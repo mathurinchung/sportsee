@@ -1,0 +1,40 @@
+.Sidebar {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 117px;
+  height: 100%;
+  background-color: #020203;
+}
+
+.Sidebar nav {
+  padding-top: 347px;
+}
+
+.Sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.Sidebar nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+}
+
+.Sidebar p {
+  margin-top: 224px;
+  width: 138px;
+  color: #fff;
+  font-size: 12px;
+  transform: rotate(-90deg);
+}

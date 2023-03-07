@@ -2,6 +2,37 @@ i {
   display: inline-block;
 }
 
+.icon-sidebar {
+  background-color: #ff0101;
+}
+
+.icon-meditation {
+  mask: url('../../assets/svg/meditation.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/meditation.svg') no-repeat;
+  width: 36px;
+  height: 32px;
+  mask-size: 36px;
+  -webkit-mask-size: 36px;
+}
+
+.icon-swimming {
+  mask: url('../../assets/svg/swimming.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/swimming.svg') no-repeat;
+  width: 32px;
+  height: 32px;
+  mask-size: 32px;
+  -webkit-mask-size: 32px;
+}
+
+.icon-biking {
+  mask: url('../../assets/svg/biking.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/biking.svg') no-repeat;
+  width: 37.46px;
+  height: 32px;
+  mask-size: 37.46px;
+  -webkit-mask-size: 37.46px;
+}
+
 .icon-dumbbell {
   mask: url('../../assets/svg/dumbbell.svg') no-repeat;
   -webkit-mask: url('../../assets/svg/dumbbell.svg') no-repeat;

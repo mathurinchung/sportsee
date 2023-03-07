@@ -1,2 +1,13 @@
-@import 'layout/header';
+// @import 'abstracts/';
+// @import 'vendors/';
+// @import 'base/';
 
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/sidebar';
+
+@import 'components/icon';
+
+@import 'pages/profile';
+
+// @import 'themes/';
