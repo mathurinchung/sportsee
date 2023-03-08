@@ -41,3 +41,43 @@ i {
   mask-size: 32px;
   -webkit-mask-size: 32px;
 }
+
+.icon-energy {
+  mask: url('../../assets/svg/energy.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/energy.svg') no-repeat;
+  width: 15.8px;
+  height: 20px;
+  mask-size: 15.8px;
+  -webkit-mask-size: 15.8px;
+  background-color: #ff0000;
+}
+
+.icon-chicken {
+  mask: url('../../assets/svg/chicken.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/chicken.svg') no-repeat;
+  width: 18.84px;
+  height: 18.74px;
+  mask-size: 18.84px;
+  -webkit-mask-size: 18.84px;
+  background-color: #4ab8ff;
+}
+
+.icon-apple {
+  mask: url('../../assets/svg/apple.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/apple.svg') no-repeat;
+  width: 16.81px;
+  height: 20px;
+  mask-size: 16.81px;
+  -webkit-mask-size: 16.81px;
+  background-color: #fdcc0c;
+}
+
+.icon-cheeseburger {
+  mask: url('../../assets/svg/cheeseburger.svg') no-repeat;
+  -webkit-mask: url('../../assets/svg/cheeseburger.svg') no-repeat;
+  width: 20px;
+  height: 18.75px;
+  mask-size: 20px;
+  -webkit-mask-size: 20px;
+  background-color: #fd5181;
+}

@@ -1,0 +1,30 @@
+.Dashboard {
+  position: absolute;
+  left: 117px;
+  display: grid;
+  grid-template-columns: repeat(3, 258px) 260px;
+  grid-template-rows: 127px repeat(4, 124px);
+  column-gap: 30px;
+  row-gap: 39px;
+  margin-top: 68px;
+  margin-left: 107px;
+}
+
+.Dashboard header {
+  grid-column: 1 / 5;
+}
+
+.Dashboard header h2 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.Dashboard header .firstname {
+  color: #ff0101;
+}
+
+.Dashboard header p {
+  margin-top: 41px;
+  font-size: 18px;
+  font-weight: 400;
+}

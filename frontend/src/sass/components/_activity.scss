@@ -1,0 +1,51 @@
+.ActivityChart {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  display: grid;
+  grid-template-rows: 58px auto;
+  border-radius: 5px;
+  padding: 24px 26px 23px 32px;
+  width: 834px;
+  height: 320px;
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+
+.ActivityChart h3 {
+  grid-row: 1 / 2;
+  color: #20253a;
+  font-size: 15px;
+}
+
+.ActivityChart .ActivityLegend {
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.ActivityChart .LegendItem {
+  display: flex;
+  align-items: center;
+  color: #74798c;
+  font-size: 14px;
+}
+
+.ActivityChart .LegendItem::before {
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  content: '';
+}
+
+.ActivityChart .LegendItem:first-child::before {
+  margin-right: 10px;
+  background-color: #282d30;
+}
+
+.ActivityChart .LegendItem:last-child::before {
+  margin-right: 12px;
+  background-color: #e60000;
+}
