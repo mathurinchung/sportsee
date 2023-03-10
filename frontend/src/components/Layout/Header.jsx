@@ -5,7 +5,7 @@ import logo from '../../assets/svg/logo.svg';
 function Header() {
   return (
     <header id="Header">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={ logo } className="App-logo" alt="logo" />
       
       <Nav>
         <li><NavLink to="/">Accueil</NavLink></li>

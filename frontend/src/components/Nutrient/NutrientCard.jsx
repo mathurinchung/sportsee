@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Icon } from '../Assets';
 
 function NutrientCard({ className, icon, data, type }) {
@@ -16,3 +17,10 @@ function NutrientCard({ className, icon, data, type }) {
 }
 
 export default NutrientCard;
+
+NutrientCard.propTypes = {
+  className: PropTypes.string,
+  icon: PropTypes.string,
+  data: PropTypes.string,
+  type: PropTypes.string
+}

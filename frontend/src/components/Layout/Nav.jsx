@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Nav({ children }) {
   return (
     <nav>
@@ -9,3 +11,7 @@ function Nav({ children }) {
 }
 
 export default Nav;
+
+Nav.propTypes = {
+  children: PropTypes.element
+}

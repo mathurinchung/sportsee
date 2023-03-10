@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Dashboard({ children }) {
   return (
     <section className="Dashboard">
@@ -7,3 +9,7 @@ function Dashboard({ children }) {
 }
 
 export default Dashboard;
+
+Dashboard.propTypes = {
+  children: PropTypes.element
+}
