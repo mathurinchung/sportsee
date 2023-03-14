@@ -1,5 +1,3 @@
-import Header from './Header';
-import Main from './Main';
-import Sidebar from './Sidebar';
-
-export { Header, Main, Sidebar };
+export { default as Header } from './Header';
+export { default as Main} from './Main';
+export { default as Sidebar } from './Sidebar';

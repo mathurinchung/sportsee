@@ -1,6 +1,4 @@
-import ActivityChart from './ActivityChart';
-import AverageChart from './AverageChart';
-import PerformanceChart from './PerformanceChart';
-import ScoreChart from './ScoreChart';
-
-export { ActivityChart, AverageChart, PerformanceChart, ScoreChart };
+export { default as ActivityChart } from './ActivityChart';
+export { default as AverageChart } from './AverageChart';
+export { default as PerformanceChart } from './PerformanceChart';
+export { default as ScoreChart } from './ScoreChart';

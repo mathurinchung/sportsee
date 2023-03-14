@@ -1,0 +1,27 @@
+.ScoreChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / 4;
+  grid-row: 4 / 6;
+  margin-top: 24px;
+  padding: 24px 30px;
+  height: 263px;
+  background-color: #fbfbfb;
+}
+
+.ScoreChart .title {
+  font-size: 15px;
+  fill: #20253a;
+}
+
+.ScoreChart .content {
+  line-height: 26px;
+  fill: #74798c;
+}
+
+.ScoreChart .content .percent {
+  font-weight: 700;
+  font-size: 26px;
+  fill: #282d30;
+}

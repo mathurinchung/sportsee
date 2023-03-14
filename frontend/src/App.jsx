@@ -1,6 +1,6 @@
 import { Header } from './components/Layout';
 import { Router } from './components/Routes';
-import './sass/App.scss';
+import './assets/sass/App.scss';
 
 function App() {
   return (

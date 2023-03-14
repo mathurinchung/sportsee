@@ -1,42 +1,26 @@
 import { useParams } from 'react-router-dom';
 import { Main, Sidebar } from '../components/Layout';
 import { Dashboard, HeaderProfile } from '../components/Dashboard';
-// import { ActivityChart, AverageChart, PerformanceChart, ScoreChart } from '../components/Charts';
+import { ActivityChart, AverageChart, PerformanceChart, ScoreChart } from '../components/Charts';
 import { NutrientGroup } from '../components/Nutrient';
-// import { UserServiceAPI } from '../services/user';
-import { UserServiceMocked } from '../services/user';
+import { useGetUserStore } from '../hooks/user';
 
 function Profile() {
   const { userId } = useParams();
-  // const userServiceAPI = new UserServiceAPI(userId);  
-  // const user = userServiceAPI.getUserMainData();
-  // const activity = userServiceAPI.getUserActivity();
-  // const average = userServiceAPI.getUserAverageSessions();
-  // const performance = userServiceAPI.getUserPerformance();
-  
-  const userServiceMocked = new UserServiceMocked(userId);
-  const user = userServiceMocked.getUserMainData();
-  const activity = userServiceMocked.getUserActivity();
-  const average = userServiceMocked.getUserAverageSessions();
-  const performance = userServiceMocked.getUserPerformance();
+  const { data, isLoading } = useGetUserStore(userId);
 
-  console.log(user);
-  console.log(activity);
-  console.log(average);
-  console.log(performance);
-
-  return (
+  return !isLoading && (
     <Main className="Profile">
       <Sidebar />
 
       <Dashboard>
-        <HeaderProfile userInfos={ user.userInfos } />
+        <HeaderProfile data={ data.userInfos } />
 
-        {/* <ActivityChart data={ activity } /> */}
-        {/* <AverageChart data={ average } /> */}
-        {/* <PerformanceChart data={ performance } /> */}
-        {/* <ScoreChart data={ user.todayScore } /> */}
-        <NutrientGroup keyData={ user.keyData } />
+        <ActivityChart data={ data.activitySessions } />
+        <AverageChart data={ data.averageSessions } />
+        <PerformanceChart data={ data.performance } />
+        <ScoreChart data={ data } />
+        <NutrientGroup data={ data.keyData } />
       </Dashboard>
     </Main>
   );

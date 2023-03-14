@@ -1,4 +1,2 @@
-import Dashboard from './Dashboard';
-import HeaderProfile from './HeaderProfile';
-
-export { Dashboard, HeaderProfile };
+export { default as Dashboard } from './Dashboard';
+export { default as HeaderProfile } from './HeaderProfile';

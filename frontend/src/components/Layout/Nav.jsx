@@ -13,5 +13,5 @@ function Nav({ children }) {
 export default Nav;
 
 Nav.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.array
 }

@@ -11,5 +11,5 @@ function Dashboard({ children }) {
 export default Dashboard;
 
 Dashboard.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.node
 }

@@ -3,7 +3,7 @@ import { Icon } from '../Assets';
 
 function NutrientCard({ className, icon, data, type }) {
   return (
-    <div className={ `NutrientCard ${ className }` }>
+    <div className={ `Card NutrientCard ${ className }` }>
       <div className="icon-nutrient">
         <Icon className={ `icon-${ icon }` } />
       </div>

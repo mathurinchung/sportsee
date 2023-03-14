@@ -3,33 +3,16 @@ import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Le
 
 function ActivityChart({ data }) {
   return (
-    <div className="ActivityChart">
-      <h3>Activité quotidienne</h3>
-
-      <ul className="ActivityLegend">
-        <li className="LegendItem">Poids (kg)</li>
-        <li className="LegendItem">Calories brûlées (kCal)</li>
-      </ul>
-
+    <div className="Card ActivityChart">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart
-          width={500}
-          height={300}
-          data={ data }
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
+        <BarChart data={ data } >
+          <CartesianGrid />
+          <XAxis dataKey="day" />
+          <YAxis orientation="right" />
           <Tooltip />
-          <Legend />
-          <Bar dataKey="pv" fill="#8884d8" />
-          <Bar dataKey="uv" fill="#82ca9d" />
+          <Legend verticalAlign="top" align="right" iconType="circle" iconSize="8" />
+          <Bar name="Poids (kg)" dataKey="kilogram" fill="#282d30" />
+          <Bar name="Calories brûlées (kCal)" dataKey="calories" fill="#e60000" />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -39,5 +22,5 @@ function ActivityChart({ data }) {
 export default ActivityChart;
 
 ActivityChart.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.array
 };

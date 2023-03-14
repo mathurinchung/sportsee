@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-function HeaderProfile({ userInfos }) {
+function HeaderProfile({ data }) {
   return (
     <header>
-      <h2>Bonjour <span className="firstname">{ userInfos === undefined ? null : userInfos.firstName }</span></h2>
+      <h2>Bonjour <span className="firstname">{ data.firstName }</span></h2>
       <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </header>
   );
@@ -12,5 +12,5 @@ function HeaderProfile({ userInfos }) {
 export default HeaderProfile;
 
 HeaderProfile.propTypes = {
-  uqerInfos: PropTypes.object
+  data: PropTypes.object
 }

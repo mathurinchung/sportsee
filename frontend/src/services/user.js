@@ -1,56 +1,38 @@
-import { useServicesAPI } from './hooks';
-import data from '../__mocks__/data';
-import { UserModel, SessionsModel, PerformanceModel } from '../models';
+import { Api, ApiEntity } from './api';
+import data from '../__mocks__/user';
 
-export class UserServiceAPI {
+export class UserStoreAPI {
   constructor(userId) {
     this.userId = userId;
+    this.api = new Api()
   }
 
-  getUserMainData = () => {
-    const data = useServicesAPI(`/user/${ this.userId }`);
-    return new UserModel(data);
-  }
-
-  getUserActivity = () => {
-    const data = useServicesAPI(`/user/${ this.userId }/activity`);
-    return new SessionsModel(data);
-  }
-
-  getUserAverageSessions = () => {
-    const data = useServicesAPI(`/user/${ this.userId }/average-sessions`);
-    return new SessionsModel(data);
-  }
-
-  getUserPerformance = () => {
-    const data = useServicesAPI(`/user/${ this.userId }/performance`);
-    return new PerformanceModel(data);
-  }
+  getUserMainData = () => new ApiEntity({ key: 'user', api: this.api }).select({ selector: this.userId });
+  getUserActivity = () => new ApiEntity({ key: 'user',api: this.api }).select({ selector: `${this.userId}/activity` });
+  getUserAverageSessions = () => new ApiEntity({ key: 'user',api: this.api }).select({ selector: `${this.userId}/average-sessions` });
+  getUserPerformance = () => new ApiEntity({ key: 'user',api: this.api }).select({ selector: `${this.userId}/performance` });
 }
 
-export class UserServiceMocked {
+export class UserStoreMocked {
   constructor(userId) {
     this.userId = userId;
     this.data = data;
   }
 
-  getUserMainData = () => {
-    const data = this.data['USER_MAIN_DATA'].find(user => user.id === parseInt(this.userId));
-    return new UserModel(data);
-  }
+  getUserMainData = () => Promise.resolve(this.data['USER_MAIN_DATA'].find(user => user.id === parseInt(this.userId)));
+  getUserActivity = () => Promise.resolve(this.data['USER_ACTIVITY'].find(user => user.userId === parseInt(this.userId)));
+  getUserAverageSessions = () => Promise.resolve(this.data['USER_AVERAGE_SESSIONS'].find(user => user.userId === parseInt(this.userId)));
+  getUserPerformance = () => Promise.resolve(this.data['USER_PERFORMANCE'].find(user => user.userId === parseInt(this.userId)));
+}
 
-  getUserActivity = () => {
-    const data = this.data['USER_ACTIVITY'].find(user => user.userId === parseInt(this.userId));
-    return new SessionsModel(data);
-  }
 
-  getUserAverageSessions = () => {
-    const data = this.data['USER_AVERAGE_SESSIONS'].find(user => user.userId === parseInt(this.userId));
-    return new SessionsModel(data);
-  }
+export const getUserStore = async (userStore, setData, Model) => {
+  const store = {
+    user: await userStore.getUserMainData(),
+    activity: await userStore.getUserActivity(),
+    average: await userStore.getUserAverageSessions(),
+    performance: await userStore.getUserPerformance()
+  };
 
-  getUserPerformance = () => {
-    const data = this.data['USER_PERFORMANCE'].find(user => user.userId === parseInt(this.userId));
-    return new PerformanceModel(data);
-  }
+  setData(new Model(store));
 }

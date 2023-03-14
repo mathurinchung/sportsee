@@ -12,5 +12,5 @@ export default Main;
 
 Main.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.element
+  children: PropTypes.node
 }

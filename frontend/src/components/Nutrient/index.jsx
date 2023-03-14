@@ -1,3 +1,1 @@
-import NutrientGroup from './NutrientGroup';
-
-export { NutrientGroup };
+export { default as NutrientGroup } from './NutrientGroup';
