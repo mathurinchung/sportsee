@@ -9,8 +9,8 @@ function HeaderProfile({ data }) {
   );
 }
 
-export default HeaderProfile;
-
 HeaderProfile.propTypes = {
   data: PropTypes.object
-}
+};
+
+export default HeaderProfile;

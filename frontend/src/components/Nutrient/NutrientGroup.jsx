@@ -13,8 +13,8 @@ function NutrientGroup({ data }) {
   );
 }
 
-export default NutrientGroup;
-
 NutrientGroup.propTypes = {
   data: PropTypes.object
-}
+};
+
+export default NutrientGroup;

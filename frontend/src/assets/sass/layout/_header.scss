@@ -8,27 +8,29 @@
   height: 91px;
   background-color: #020203;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  & .App-logo {
+    width: 178px;
+    height: 60.93px;
+  }
+
+  & nav {
+    width: 994px;
+    height: 24px;
+  
+    & ul {
+      display: flex;
+      justify-content: space-between;
+    
+      & li {
+        font-size: 24px;
+      
+        & a {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
 
-#Header .App-logo {
-  width: 178px;
-  height: 60.93px;
-}
 
-#Header nav {
-  width: 994px;
-  height: 24px;
-}
-
-#Header nav ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-#Header nav ul li {
-  font-size: 24px;
-}
-
-#Header nav ul li a {
-  color: #fff;
-}

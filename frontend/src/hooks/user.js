@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getUserStore, UserStoreMocked, UserStoreAPI } from '../services/user';
+import { UserServicesMocked, UserServicesAPI } from '../services/user';
 import { UserModel } from '../models/user';
 
 export function useGetUserStore(userId) {
@@ -11,17 +11,19 @@ export function useGetUserStore(userId) {
   useEffect(() => {
     return async () => {
       try {
-        if (userId === '10') {
-          const userStore = new UserStoreMocked(userId);
-          await getUserStore(userStore, setData, UserModel);
-        } else {
-          const userStore = new UserStoreAPI(userId);
-          await getUserStore(userStore, setData, UserModel);
-        }
-  
+        const userServices = (userId === '10') ? new UserServicesMocked(userId) : new UserServicesAPI(userId);
+
+        const store = {
+          user: await userServices.getUserMainData(),
+          activity: await userServices.getUserActivity(),
+          average: await userServices.getUserAverageSessions(),
+          performance: await userServices.getUserPerformance()
+        };
+      
+        setData(new UserModel(store));
         setIsLoading(false);
       } catch(error) {
-        navigate("/notfound");
+        (error.response.status === 404) && navigate("/notfound");
       }
     }
   }, [ userId, navigate ]);

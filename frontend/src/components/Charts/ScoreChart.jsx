@@ -21,8 +21,8 @@ function ScoreChart({ data }) {
   );
 }
 
-export default ScoreChart;
-
 ScoreChart.propTypes = {
   data: PropTypes.object
 };
+
+export default ScoreChart;

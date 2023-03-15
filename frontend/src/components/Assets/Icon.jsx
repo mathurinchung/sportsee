@@ -6,8 +6,8 @@ function Icon({ className }) {
   );
 }
 
-export default Icon;
-
 Icon.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string.isRequired
 };
+
+export default Icon;

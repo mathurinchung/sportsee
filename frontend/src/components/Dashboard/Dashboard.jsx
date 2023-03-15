@@ -8,8 +8,8 @@ function Dashboard({ children }) {
   );
 }
 
-export default Dashboard;
-
 Dashboard.propTypes = {
   children: PropTypes.node
-}
+};
+
+export default Dashboard;

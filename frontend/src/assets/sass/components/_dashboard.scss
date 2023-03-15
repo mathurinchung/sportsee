@@ -8,23 +8,26 @@
   row-gap: 39px;
   margin-top: 68px;
   margin-left: 107px;
+
+  & header {
+    grid-column: 1 / 5;
+
+    & h2 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+
+    & .firstname {
+      color: #ff0101;
+    }
+
+    & p {
+      margin-top: 41px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
 }
 
-.Dashboard header {
-  grid-column: 1 / 5;
-}
 
-.Dashboard header h2 {
-  font-size: 48px;
-  font-weight: 500;
-}
 
-.Dashboard header .firstname {
-  color: #ff0101;
-}
-
-.Dashboard header p {
-  margin-top: 41px;
-  font-size: 18px;
-  font-weight: 400;
-}

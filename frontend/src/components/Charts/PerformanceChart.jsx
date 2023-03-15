@@ -26,8 +26,8 @@ function PerformanceChart({ data }) {
   );
 }
 
-export default PerformanceChart;
-
 PerformanceChart.propTypes = {
   data: PropTypes.array
 };
+
+export default PerformanceChart;

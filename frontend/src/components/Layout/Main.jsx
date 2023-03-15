@@ -8,9 +8,9 @@ function Main({ className, children }) {
   );
 }
 
-export default Main;
-
 Main.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node
-}
+};
+
+export default Main;

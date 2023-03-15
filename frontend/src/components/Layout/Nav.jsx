@@ -10,8 +10,8 @@ function Nav({ children }) {
   );
 }
 
-export default Nav;
-
 Nav.propTypes = {
   children: PropTypes.array
-}
+};
+
+export default Nav;

@@ -19,8 +19,8 @@ function ActivityChart({ data }) {
   );
 }
 
-export default ActivityChart;
-
 ActivityChart.propTypes = {
   data: PropTypes.array
 };
+
+export default ActivityChart;

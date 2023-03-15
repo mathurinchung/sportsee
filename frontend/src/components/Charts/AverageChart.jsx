@@ -18,8 +18,8 @@ function AverageChart({ data }) {
   );
 }
 
-export default AverageChart;
-
 AverageChart.propTypes = {
   data: PropTypes.array
 };
+
+export default AverageChart;
