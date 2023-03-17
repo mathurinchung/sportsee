@@ -27,7 +27,7 @@ function PerformanceChart({ data }) {
 }
 
 PerformanceChart.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array.isRequired
 };
 
 export default PerformanceChart;

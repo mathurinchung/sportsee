@@ -3,9 +3,9 @@
   grid-row: 2 / 4;
   // display: grid;
   // grid-template-rows: 58px auto;
-  padding: 24px 26px 23px 32px;
-  width: 834px;
-  height: 320px;
+  padding: get-vw($desktop-context, 24px) get-vw($desktop-context, 26px) get-vw($desktop-context, 23px) get-vw($desktop-context, 32px);
+  width: get-vw($desktop-context, 834px);
+  height: get-vw($desktop-context, 320px);
 }
 
 // .ActivityChart .ActivityChartTitle {

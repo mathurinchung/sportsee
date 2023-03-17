@@ -1,5 +1,5 @@
 .Card {
-  border-radius: 5px;
+  border-radius: get-vw($desktop-context, 5px);
   background-color: #fbfbfb;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+  box-shadow: 0 get-vw($desktop-context, 2px) get-vw($desktop-context, 4px) rgba(0, 0, 0, 0.0212249);
 }

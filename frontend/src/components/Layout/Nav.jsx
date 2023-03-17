@@ -11,7 +11,7 @@ function Nav({ children }) {
 }
 
 Nav.propTypes = {
-  children: PropTypes.array
+  children: PropTypes.array.isRequired
 };
 
 export default Nav;

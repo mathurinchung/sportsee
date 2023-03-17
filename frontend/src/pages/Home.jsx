@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
-import { Main } from "../components/Layout";
+import { Link } from 'react-router-dom';
+import { Main } from '../components/Layout';
 
 function Home() {
+  const users = [
+    { userId: 10, name: 'Thomas', location: 'Mock' },
+    { userId: 12, name: 'Karl', location: 'API' },
+    { userId: 18, name: 'Cecilia', location: 'API' }
+  ];
+
   return (
     <Main className="Home">
       <ul>
-        <li><Link to="/profile/10">Thomas (Mock)</Link></li>
-        <li><Link to="/profile/12">Karl (API)</Link></li>
-        <li><Link to="/profile/18">Cecilia (API)</Link></li>
+        { users.map((user, index) => <li key={ index }><Link to={ `/profile/${ user.userId }` }>{user.name} ({user.location})</Link></li>) }
       </ul>
     </Main>
   );

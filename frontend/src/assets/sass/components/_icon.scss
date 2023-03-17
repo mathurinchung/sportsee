@@ -9,75 +9,75 @@ i {
 .icon-meditation {
   mask: url('/src/assets/svg/meditation.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/meditation.svg') no-repeat;
-  width: 36px;
-  height: 32px;
-  mask-size: 36px;
-  -webkit-mask-size: 36px;
+  width: get-vw($desktop-context, 36px);
+  height: get-vw($desktop-context, 32px);
+  mask-size: get-vw($desktop-context, 36px);
+  -webkit-mask-size: get-vw($desktop-context, 36px);
 }
 
 .icon-swimming {
   mask: url('/src/assets/svg/swimming.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/swimming.svg') no-repeat;
-  width: 32px;
-  height: 32px;
-  mask-size: 32px;
-  -webkit-mask-size: 32px;
+  width: get-vw($desktop-context, 32px);
+  height: get-vw($desktop-context, 32px);
+  mask-size: get-vw($desktop-context, 32px);
+  -webkit-mask-size: get-vw($desktop-context, 32px);
 }
 
 .icon-biking {
   mask: url('/src/assets/svg/biking.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/biking.svg') no-repeat;
-  width: 37.46px;
-  height: 32px;
-  mask-size: 37.46px;
-  -webkit-mask-size: 37.46px;
+  width: get-vw($desktop-context, 37.46px);
+  height: get-vw($desktop-context, 32px);
+  mask-size: get-vw($desktop-context, 37.46px);
+  -webkit-mask-size: get-vw($desktop-context, 37.46px);
 }
 
 .icon-dumbbell {
   mask: url('/src/assets/svg/dumbbell.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/dumbbell.svg') no-repeat;
-  width: 32px;
-  height: 32px;
-  mask-size: 32px;
-  -webkit-mask-size: 32px;
+  width: get-vw($desktop-context, 32px);
+  height: get-vw($desktop-context, 32px);
+  mask-size: get-vw($desktop-context, 32px);
+  -webkit-mask-size: get-vw($desktop-context, 32px);
 }
 
 .icon-energy {
   mask: url('/src/assets/svg/energy.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/energy.svg') no-repeat;
-  width: 15.8px;
-  height: 20px;
-  mask-size: 15.8px;
-  -webkit-mask-size: 15.8px;
+  width: get-vw($desktop-context, 15.8px);
+  height: get-vw($desktop-context, 20px);
+  mask-size: get-vw($desktop-context, 15.8px);
+  -webkit-mask-size: get-vw($desktop-context, 15.8px);
   background-color: #ff0000;
 }
 
 .icon-chicken {
   mask: url('/src/assets/svg/chicken.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/chicken.svg') no-repeat;
-  width: 18.84px;
-  height: 18.74px;
-  mask-size: 18.84px;
-  -webkit-mask-size: 18.84px;
+  width: get-vw($desktop-context, 18.84px);
+  height: get-vw($desktop-context, 18.74px);
+  mask-size: get-vw($desktop-context, 18.84px);
+  -webkit-mask-size: get-vw($desktop-context, 18.84px);
   background-color: #4ab8ff;
 }
 
 .icon-apple {
   mask: url('/src/assets/svg/apple.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/apple.svg') no-repeat;
-  width: 16.81px;
-  height: 20px;
-  mask-size: 16.81px;
-  -webkit-mask-size: 16.81px;
+  width: get-vw($desktop-context, 16.81px);
+  height: get-vw($desktop-context, 20px);
+  mask-size: get-vw($desktop-context, 16.81px);
+  -webkit-mask-size: get-vw($desktop-context, 16.81px);
   background-color: #fdcc0c;
 }
 
 .icon-cheeseburger {
   mask: url('/src/assets/svg/cheeseburger.svg') no-repeat;
   -webkit-mask: url('/src/assets/svg/cheeseburger.svg') no-repeat;
-  width: 20px;
-  height: 18.75px;
-  mask-size: 20px;
-  -webkit-mask-size: 20px;
+  width: get-vw($desktop-context, 20px);
+  height: get-vw($desktop-context, 18.75px);
+  mask-size: get-vw($desktop-context, 20px);
+  -webkit-mask-size: get-vw($desktop-context, 20px);
   background-color: #fd5181;
 }

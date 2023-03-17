@@ -4,29 +4,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 87px 12.07px 29px;
-  height: 91px;
+  padding: get-vw($desktop-context, 18px) get-vw($desktop-context, 87px) get-vw($desktop-context, 12.07px) get-vw($desktop-context, 29px);
+  height: get-vw($desktop-context, 91px);
   background-color: #020203;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 get-vw($desktop-context, 4px) get-vw($desktop-context, 4px) rgba(0, 0, 0, 0.25);
 
   & .App-logo {
-    width: 178px;
-    height: 60.93px;
+    width: get-vw($desktop-context, 178px);
+    height: get-vw($desktop-context, 60.93px);
   }
 
   & nav {
-    width: 994px;
-    height: 24px;
+    width: get-vw($desktop-context, 994px);
+    height: get-vw($desktop-context, 24px);
   
     & ul {
       display: flex;
       justify-content: space-between;
     
       & li {
-        font-size: 24px;
+        font-size: get-vw($desktop-context, 24px);
       
         & a {
           color: #fff;
+
+          &.active {
+            pointer-events: none;
+          }
+
+          &.disabled {
+            pointer-events: none;
+          }
+
+          &:hover {
+            color: #ff0000;
+            text-decoration: underline;
+          }
         }
       }
     }

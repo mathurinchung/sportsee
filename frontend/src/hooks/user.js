@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserServicesMocked, UserServicesAPI } from '../services/user';
 import { UserModel } from '../models/user';
 
-export function useGetUserStore(userId) {
+function useGetUserStore(userId) {
   const [ isLoading, setIsLoading ] = useState(true);
   const [ data, setData ] = useState({});
   const navigate = useNavigate();
@@ -30,3 +30,5 @@ export function useGetUserStore(userId) {
 
   return { data, isLoading };
 }
+
+export default useGetUserStore;

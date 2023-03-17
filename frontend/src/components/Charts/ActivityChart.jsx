@@ -20,7 +20,7 @@ function ActivityChart({ data }) {
 }
 
 ActivityChart.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array.isRequired
 };
 
 export default ActivityChart;

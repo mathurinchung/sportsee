@@ -9,8 +9,8 @@ function Main({ className, children }) {
 }
 
 Main.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Main;

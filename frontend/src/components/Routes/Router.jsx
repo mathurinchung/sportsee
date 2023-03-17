@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Home, Profile, ComingSoon } from '../../pages';
+import { Home, Profile, ComingSoon, NotFound } from '../../pages';
 
 function Router() {
   return (
@@ -11,7 +11,7 @@ function Router() {
 
       <Route path="/coming" element={ <ComingSoon /> } />
 
-      <Route path="/notfound" element={ <h1>NotFound</h1> } />
+      <Route path="/notfound" element={ <NotFound /> } />
       <Route path="*" element={ <Navigate to="/notfound" /> } />
     </Routes>
   );

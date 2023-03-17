@@ -4,23 +4,24 @@
   align-items: center;
   grid-column: 3 / 4;
   grid-row: 4 / 6;
-  margin-top: 24px;
-  padding: 24px 30px;
-  height: 263px;
+  margin-top: get-vw($desktop-context, 24px);
+  padding: get-vw($desktop-context, 24px) get-vw($desktop-context, 30px);
+  height: get-vw($desktop-context, 263px);
   background-color: #fbfbfb;
 
   & .title {
-    font-size: 15px;
+    font-size: get-vw($desktop-context, 15px);
     fill: #20253a;
   }
 
   & .content {
-    line-height: 26px;
+    line-height: get-vw($desktop-context, 26px);
+    font-size: get-vw($desktop-context, 16px);
     fill: #74798c;
 
     & .percent {
       font-weight: 700;
-      font-size: 26px;
+      font-size: get-vw($desktop-context, 26px);
       fill: #282d30;
     }
   }

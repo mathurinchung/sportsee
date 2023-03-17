@@ -9,7 +9,7 @@ function Dashboard({ children }) {
 }
 
 Dashboard.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 };
 
 export default Dashboard;

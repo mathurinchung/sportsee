@@ -1,40 +1,40 @@
 .Sidebar {
   position: absolute;
-  z-index: 100;
   top: 0;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 117px;
-  height: 100%;
+  width: get-vw($desktop-context, 117px);
+  height: get-vw($desktop-context, 1024px);
   background-color: #020203;
 
   & nav {
-    padding-top: 347px;
+    padding-top: get-vw($desktop-context, 347px);
   
     & ul {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: get-vw($desktop-context, 20px);
     
       & li {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 6px;
-        width: 64px;
-        height: 64px;
+        border-radius: get-vw($desktop-context, 6px);
+        width: get-vw($desktop-context, 64px);
+        height: get-vw($desktop-context, 64px);
         background-color: #fff;
       }
     }
   }
 
   & p {
-    margin-top: 224px;
-    width: 138px;
+    margin-top: get-vw($desktop-context, 224px);
+    width: get-vw($desktop-context, 138px);
     color: #fff;
-    font-size: 12px;
+    font-size: get-vw($desktop-context, 12px);
     transform: rotate(-90deg);
   }
 }

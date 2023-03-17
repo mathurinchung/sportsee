@@ -19,7 +19,7 @@ function AverageChart({ data }) {
 }
 
 AverageChart.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array.isRequired
 };
 
 export default AverageChart;

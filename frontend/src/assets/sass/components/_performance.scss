@@ -1,7 +1,7 @@
 .PerformanceChart {
   grid-column: 2 / 3;
   grid-row: 4 / 6;
-  margin-top: 24px;
-  height: 263px;
+  margin-top: get-vw($desktop-context, 24px);
+  height: get-vw($desktop-context, 263px);
   background-color: #282d30;
 }

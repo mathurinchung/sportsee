@@ -1,0 +1,26 @@
+.NotFound {
+  padding-top: get-vw($desktop-context, 169px);
+  color: #ff0000;
+  text-align: center;
+
+  & .errorCode {
+    font-size: get-vw($desktop-context, 288px);
+    font-weight: 700;
+    line-height: 142.6%;
+  }
+
+  & .errorMsg {
+    padding-top: get-vw($desktop-context, 66px);
+    font-size: get-vw($desktop-context, 36px);
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+
+  & a {
+    display: inline-block;
+    padding: get-vw($desktop-context, 182px) 0 get-vw($desktop-context, 159px);
+    font-size: get-vw($desktop-context, 18px);
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+}

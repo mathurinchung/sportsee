@@ -1,19 +1,19 @@
 .Dashboard {
   position: absolute;
-  left: 117px;
+  left: get-vw($desktop-context, 117px);
   display: grid;
-  grid-template-columns: repeat(3, 258px) 260px;
-  grid-template-rows: 127px repeat(4, 124px);
-  column-gap: 30px;
-  row-gap: 39px;
-  margin-top: 68px;
-  margin-left: 107px;
+  grid-template-columns: repeat(3, get-vw($desktop-context, 258px)) get-vw($desktop-context, 260px);
+  grid-template-rows: get-vw($desktop-context, 127px) repeat(4, get-vw($desktop-context, 124px));
+  column-gap: get-vw($desktop-context, 30px);
+  row-gap: get-vw($desktop-context, 39px);
+  margin-top: get-vw($desktop-context, 68px);
+  margin-left: get-vw($desktop-context, 107px);
 
   & header {
     grid-column: 1 / 5;
 
     & h2 {
-      font-size: 48px;
+      font-size: get-vw($desktop-context, 48px);
       font-weight: 500;
     }
 
@@ -22,8 +22,8 @@
     }
 
     & p {
-      margin-top: 41px;
-      font-size: 18px;
+      margin-top: get-vw($desktop-context, 41px);
+      font-size: get-vw($desktop-context, 18px);
       font-weight: 400;
     }
   }

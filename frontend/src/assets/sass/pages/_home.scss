@@ -2,4 +2,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: get-vw($desktop-context, 15px);
+    width: 100%;
+    height: get-vw($desktop-context, 350px);
+
+    & li {
+      display: flex;
+      align-items: center;
+      border-radius: get-vw($desktop-context, 5px);
+      padding: get-vw($desktop-context, 10px) get-vw($desktop-context, 15px);
+      width: get-vw($desktop-context, 350px);
+      height: get-vw($desktop-context, 50px);
+      background-color: #282d30;
+
+      & a {
+        width: 100%;
+        color: #fcfcfc;
+
+        &:hover {
+          color: #ff0000;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
