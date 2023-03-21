@@ -1,47 +1,80 @@
 .ActivityChart {
   grid-column: 1 / 2;
   grid-row: 2 / 4;
-  // display: grid;
-  // grid-template-rows: 58px auto;
   padding: get-vw($desktop-context, 24px) get-vw($desktop-context, 26px) get-vw($desktop-context, 23px) get-vw($desktop-context, 32px);
   width: get-vw($desktop-context, 834px);
   height: get-vw($desktop-context, 320px);
+
+  & .xAxis {
+    font-size: get-vw($desktop-context, 14px);
+  }
+
+  & .yAxis {
+    font-size: get-vw($desktop-context, 14px);
+  }
+
+  & .legend {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: get-vw($desktop-context, 64.5px);
+
+    & h3 {
+      color: #20253a;
+      font-size: get-vw($desktop-context, 15px);
+      font-weight: 500;
+    }
+  
+    & .legend-list {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: get-vw($desktop-context, 32px);
+  
+      & .legend-item {
+        display: flex;
+        align-items: center;
+        color: #74798c;
+        font-size: get-vw($desktop-context, 14px);
+  
+        &::before {
+          display: inline-block;
+          border-radius: 50%;
+          width: get-vw($desktop-context, 8px);
+          height: get-vw($desktop-context, 8px);
+          content: '';
+        }
+  
+        &:first-child::before {
+          margin-right: get-vw($desktop-context, 10px);
+          background-color: #282d30;
+        }
+  
+        &:last-child::before {
+          margin-right: get-vw($desktop-context, 12px);
+          background-color: #e60000;
+        }
+      }
+    }
+  }
+
+  & .tooltip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: get-vw($desktop-context, 39px);
+    height: get-vw($desktop-context, 63px);
+    background-color: #e60000;
+    color: #fff;
+    font-size: get-vw($desktop-context, 7px);
+  }
+
+  & .bar {
+    &.kilogram {
+      fill: #282d30;
+    }
+
+    &.calories {
+      fill: #e60000;
+    }
+  }
 }
-
-// .ActivityChart .ActivityChartTitle {
-//   color: #20253a;
-//   font-size: 15px;
-// }
-
-// .ActivityChart .ActivityLegend {
-//   grid-row: 1 / 2;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: flex-start;
-//   gap: 32px;
-// }
-
-// .ActivityChart .LegendItem {
-//   display: flex;
-//   align-items: center;
-//   color: #74798c;
-//   font-size: 14px;
-// }
-
-// .ActivityChart .LegendItem::before {
-//   display: inline-block;
-//   border-radius: 50%;
-//   width: 8px;
-//   height: 8px;
-//   content: '';
-// }
-
-// .ActivityChart .LegendItem:first-child::before {
-//   margin-right: 10px;
-//   background-color: #282d30;
-// }
-
-// .ActivityChart .LegendItem:last-child::before {
-//   margin-right: 12px;
-//   background-color: #e60000;
-// }

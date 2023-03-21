@@ -1,4 +1,4 @@
-import { Api, ApiEntity } from './api';
+import { Api, ApiEntity } from '../api';
 import mock from '../__mocks__/user';
 
 export class UserServicesAPI {

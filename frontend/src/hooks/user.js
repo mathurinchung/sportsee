@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserServicesMocked, UserServicesAPI } from '../services/user';
-import { UserModel } from '../models/user';
+import { UserModel } from '../models';
 
-function useGetUserStore(userId) {
+export default function useGetUserStore(userId) {
   const [ isLoading, setIsLoading ] = useState(true);
   const [ data, setData ] = useState({});
   const navigate = useNavigate();
@@ -30,5 +30,3 @@ function useGetUserStore(userId) {
 
   return { data, isLoading };
 }
-
-export default useGetUserStore;

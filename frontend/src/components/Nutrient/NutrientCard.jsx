@@ -1,20 +1,16 @@
 import PropTypes from 'prop-types';
 import { Icon } from '../Assets';
-import { formatNumber } from '../../utils';
-import { useNutrientState } from '../../hooks';
 
 function NutrientCard({ data }) {
-  const { nutrient, isLoading } = useNutrientState(data);
-
-  return !isLoading && (
-    <div className={ `Card NutrientCard ${ nutrient.icon }` }>
+  return (
+    <div className={ `Card NutrientCard ${ data.icon }` }>
       <div className="icon-nutrient">
-        <Icon className={ `icon-${ nutrient.icon }` } />
+        <Icon className={ `icon-${ data.icon }` } />
       </div>
 
       <div className="info-nutrient">
-        <span className="data-nutrient">{ formatNumber(data.value) + nutrient.unit }</span>
-        <span className="type-nutrient">{ nutrient.type }</span>
+        <span className="data-nutrient">{ data.value }</span>
+        <span className="type-nutrient">{ data.key }</span>
       </div>
     </div>
   );

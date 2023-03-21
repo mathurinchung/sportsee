@@ -3,19 +3,15 @@ import Nav from './Nav';
 import logo from '../../assets/svg/logo.svg';
 
 function Header() {
-  const nav = [
-    { to: '/', content: 'Accueil' },
-    { to: '/profile', content: 'Profile' },
-    { to: '/settings', content: 'Réglage' },
-    { to: '/community', content: 'Communauté' }
-  ];
-
   return (
     <header id="Header">
       <img src={ logo } className="App-logo" alt="logo" />
 
       <Nav>
-        { nav.map((navlink, index) => <li key={ index }><NavLink to={ navlink.to }>{ navlink.content }</NavLink></li>) }
+        <li><NavLink to="/">Accueil</NavLink></li>
+        <li><NavLink to="/profile">Profile</NavLink></li>
+        <li><NavLink to="/settings">Réglage</NavLink></li>
+        <li><NavLink to="/community">Communauté</NavLink></li>
       </Nav>
     </header>
   );

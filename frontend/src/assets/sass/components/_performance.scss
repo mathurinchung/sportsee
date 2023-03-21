@@ -4,4 +4,9 @@
   margin-top: get-vw($desktop-context, 24px);
   height: get-vw($desktop-context, 263px);
   background-color: #282d30;
+
+  & .recharts-polar-angle-axis-tick-value {
+    font-size: get-vw($desktop-context, 12px);
+    fill: #fff;
+  }
 }

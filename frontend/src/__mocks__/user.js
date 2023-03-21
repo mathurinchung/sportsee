@@ -22,53 +22,53 @@ const USER_ACTIVITY = [
     sessions: [
       {
         day: '2020-07-01',
-        kilogram: 80,
-        calories: 240
+        kilogram: 69.5,
+        calories: 165
       },
       {
         day: '2020-07-02',
-        kilogram: 80,
-        calories: 220
+        kilogram: 70.06,
+        calories: 216
       },
       {
         day: '2020-07-03',
-        kilogram: 81,
-        calories: 280
+        kilogram: 69.86,
+        calories: 257
       },
       {
         day: '2020-07-04',
-        kilogram: 81,
-        calories: 290
+        kilogram: 69.73,
+        calories: 165
       },
       {
         day: '2020-07-05',
-        kilogram: 80,
-        calories: 160
+        kilogram: 69.86,
+        calories: 155
       },
       {
         day: '2020-07-06',
-        kilogram: 78,
-        calories: 162
+        kilogram: 69.86,
+        calories: 118
       },
       {
         day: '2020-07-07',
-        kilogram: 76,
-        calories: 390
+        kilogram: 69,
+        calories: 145
       },
       {
         day: '2020-07-08',
-        kilogram: 76,
-        calories: 390
+        kilogram: 70.25,
+        calories: 236
       },
       {
         day: '2020-07-09',
-        kilogram: 76,
-        calories: 390
+        kilogram: 69.70,
+        calories: 185
       },
       {
         day: '2020-07-10',
-        kilogram: 76,
-        calories: 390
+        kilogram: 69,
+        calories: 216
       }
     ]
   }
@@ -81,31 +81,31 @@ const USER_AVERAGE_SESSIONS = [
     sessions: [
       {
         day: 1,
-        sessionLength: 30
+        sessionLength: 0
       },
       {
         day: 2,
-        sessionLength: 23
+        sessionLength: 180
       },
       {
         day: 3,
-        sessionLength: 45
+        sessionLength: 180
       },
       {
         day: 4,
-        sessionLength: 50
+        sessionLength: 1
       },
       {
         day: 5,
-        sessionLength: 68
+        sessionLength: 1
       },
       {
         day: 6,
-        sessionLength: 35
+        sessionLength: 1
       },
       {
         day: 7,
-        sessionLength: 60
+        sessionLength: 0
       }
     ]
   }
@@ -125,27 +125,27 @@ const USER_PERFORMANCE = [
     },
     data: [
       {
-        value: 100,
+        value: 170,
         kind: 1
       },
       {
-        value: 190,
+        value: 225,
         kind: 2
       },
       {
-        value: 200,
+        value: 225,
         kind: 3
       },
       {
-        value: 110,
+        value: 180,
         kind: 4
       },
       {
-        value: 220,
+        value: 235,
         kind: 5
       },
       {
-        value: 0,
+        value: 110,
         kind: 6
       }
     ]
