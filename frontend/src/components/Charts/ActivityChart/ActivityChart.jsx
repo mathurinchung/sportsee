@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
 import { strokeDasharray, caloriesDomain, kilogramDomain, barRadius, barSize,
          renderTooltip, renderLegend } from './CustomizedChart';
-
+/**
+ * Renders a bar chart using the recharts library
+ * @param { Object } props - The component props
+ * @param { Array } props.data - An array of objects containing the data to be displayed on the chart
+ * @return { JSX.Element } - The rendered chart
+ */
 function ActivityChart({ data }) {
   return (
     <div className="Card ActivityChart">
@@ -22,6 +27,7 @@ function ActivityChart({ data }) {
   );
 }
 
+// Define the prop types for the component
 ActivityChart.propTypes = {
   data: PropTypes.array.isRequired
 };

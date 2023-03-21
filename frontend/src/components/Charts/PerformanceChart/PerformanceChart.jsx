@@ -2,6 +2,13 @@ import PropTypes from 'prop-types';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { reverseData, tickFormatter } from './CustomizedChart';
 
+/**
+ * PerformanceChart is a React component that displays a radar chart
+ * using the Recharts library.
+ * @param { Object } props - The component's props.
+ * @param { Array } props.data - An array of data to be displayed on the chart.
+ * @returns { JSX.Element } A React JSX element that represents the PerformanceChart component.
+ */
 function PerformanceChart({ data }) {
   return (
     <div className="Card PerformanceChart">
@@ -17,6 +24,9 @@ function PerformanceChart({ data }) {
   );
 }
 
+/**
+ * An array of data to be displayed on the chart.
+ */
 PerformanceChart.propTypes = {
   data: PropTypes.array.isRequired
 };

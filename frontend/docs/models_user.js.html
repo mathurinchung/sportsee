@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: models/user.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: models/user.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * A class representing a user model.
+ *
+ * @class
+ * @name UserModel
+ * @param { Object } data - The data object to be used to initialize the model.
+ * @param { Object } data.user - The user data.
+ * @param { string } data.user.id - The user's ID.
+ * @param { Object } data.user.userInfos - The user's information.
+ * @param { number } data.user.todayScore - The user's score for the day.
+ * @param { number } data.user.score - The user's overall score.
+ * @param { Object } data.user.keyData - The user's key data.
+ * @param { Object } data.activity - The activity data.
+ * @param { Object[] } data.activity.sessions - The activity sessions.
+ * @param { Object } data.average - The average data.
+ * @param { Object[] } data.average.sessions - The average sessions.
+ * @param { Object } data.performance - The performance data.
+ * @param { Object[] } data.performance.data - The performance data.
+ */
+export default class UserModel {
+  constructor(data) {
+    this._id = data.user.id;
+    this._userInfos = data.user.userInfos
+    this._score = data.user.todayScore || data.user.score;
+    this._keyData = data.user.keyData;
+    this._activitySessions = data.activity.sessions;
+    this._averageSessions = data.average.sessions;
+    this._performance = data.performance.data;
+  }
+
+  /**
+   * Returns the ID of the user.
+   *
+   * @function
+   * @name UserModel#id
+   * @returns {string} The ID of the user.
+   */
+  get id() { return this._id; }
+
+  /**
+   * Returns the information of the user.
+   *
+   * @function
+   * @name UserModel#userInfos
+   * @returns {Object} The information of the user.
+   */
+  get userInfos() { return this._userInfos; }
+
+  /**
+   * Returns the score of the user.
+   *
+   * @function
+   * @name UserModel#score
+   * @returns {number} The score of the user.
+   */
+  get score() { return this._score; }
+
+  /**
+   * Returns the key data of the user.
+   *
+   * @function
+   * @name UserModel#keyData
+   * @returns {Object} The key data of the user.
+   */
+  get keyData() { return this._keyData; }
+
+  /**
+   * Returns the activity sessions of the user.
+   *
+   * @function
+   * @name UserModel#activitySessions
+   * @returns {Object[]} The activity sessions of the user.
+   */
+  get activitySessions() { return this._activitySessions; }
+
+  /**
+   * Returns the average sessions of the user.
+   *
+   * @function
+   * @name UserModel#averageSessions
+   * @returns {Object[]} The average sessions of the user.
+   */
+  get averageSessions() { return this._averageSessions; }
+
+  /**
+   * Returns the performance data of the user.
+   *
+   * @function
+   * @name UserModel#performance
+   * @returns {Object[]} The performance data of the user.
+   */
+  get performance() { return this._performance };
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Customized">Customized</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 21 2023 10:40:42 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

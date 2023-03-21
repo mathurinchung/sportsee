@@ -2,6 +2,13 @@ import PropTypes from 'prop-types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
 import { activeDot, Customized, renderTooltip, tickFormatter } from './CustomizedChart';
 
+/**
+ * Renders a chart displaying the average session length over time.
+ * 
+ * @param { object } props - The component props.
+ * @param { Array } props.data - An array of data points for the chart.
+ * @returns { JSX.Element } - The rendered component.
+ */
 function AverageChart({ data }) {
   return (
     <div className="Card AverageChart">
@@ -18,6 +25,7 @@ function AverageChart({ data }) {
   );
 }
 
+// Define the prop types for the component
 AverageChart.propTypes = {
   data: PropTypes.array.isRequired
 };

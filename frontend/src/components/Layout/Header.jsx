@@ -2,6 +2,11 @@ import { NavLink } from 'react-router-dom';
 import Nav from './Nav';
 import logo from '../../assets/svg/logo.svg';
 
+/**
+ * A React functional component representing the header section of the web application.
+ * @function
+ * @returns { JSX.Element } JSX element representing the header section
+ */
 function Header() {
   return (
     <header id="Header">

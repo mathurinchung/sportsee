@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Main } from '../components/Layout';
 
+/**
+ * React component for the "Coming Soon" page.
+ *
+ * @function
+ * @name ComingSoon
+ * @returns { JSX.Element } The rendered "Coming Soon" page.
+ */
 function ComingSoon() {
   return (
     <Main className="ComingSoon">

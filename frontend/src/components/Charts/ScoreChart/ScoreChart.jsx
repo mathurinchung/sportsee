@@ -2,6 +2,12 @@ import PropTypes from 'prop-types';
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { Customized } from './CustomizedChart';
 
+/**
+ * ScoreChart is a React component that displays a radial bar chart
+ * using the Recharts library.
+ * @param {Object} props - The component's props.
+ * @param {Object} props.data - An object that contains a score property to be displayed on the chart.
+ */
 function ScoreChart({ data }) {
   return (
     <div className="Card ScoreChart">
@@ -16,6 +22,9 @@ function ScoreChart({ data }) {
   );
 }
 
+/**
+ * An object that contains a score property to be displayed on the chart.
+ */
 ScoreChart.propTypes = {
   data: PropTypes.object.isRequired
 };

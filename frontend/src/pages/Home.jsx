@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Main } from '../components/Layout';
 
+/**
+ * React component for the home page.
+ *
+ * @function
+ * @name Home
+ * @returns { JSX.Element } The rendered home page.
+ */
 function Home() {
   return (
     <Main className="Home">
