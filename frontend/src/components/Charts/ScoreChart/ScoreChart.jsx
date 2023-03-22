@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-// import { Customized } from './CustomizedChart';
 
 /**
  * ScoreChart is a React component that displays a radial bar chart

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
-import { activeDot, Customized, renderTooltip, tickFormatter } from './CustomizedChart';
+import { activeDot, renderTooltip, tickFormatter } from './CustomizedChart';
 
 /**
  * Renders a chart displaying the average session length over time.
@@ -14,7 +14,7 @@ function AverageChart({ data }) {
     <div className="Card AverageChart">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={ data } onMouseMove={""}>
-        <text className="content">
+          <text className="content">
             <tspan x="13%" y="17%">Durée moyenne des</tspan>
             <tspan x="13%" y="26%">sessions</tspan>
           </text>

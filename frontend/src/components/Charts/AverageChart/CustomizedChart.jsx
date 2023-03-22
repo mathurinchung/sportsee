@@ -23,16 +23,6 @@ export const onMouseMove = () => {};
  */
 export const tickFormatter = tick => ticks[tick - 1]
 
-/**
- * Customized component to be rendered in the chart
- * @returns { JSX.Element } - The customized component
- */
-export const Customized = () => {
-  return (
-    <>
-    </>
-  );
-};
 
 /**
  * Function to render the tooltip in the chart
