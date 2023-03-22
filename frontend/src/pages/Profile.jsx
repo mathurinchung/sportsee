@@ -41,7 +41,9 @@ function Profile() {
    * @returns { UserStore } User data and loading status.
    */
 
-  const { data, isLoading } = useGetUserStore(userId);
+  const [ data, isLoading ] = useGetUserStore(userId);
+
+  isLoading ? console.log(isLoading) : console.log(isLoading);
 
   return !isLoading && (
     <Main className="Profile">

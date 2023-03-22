@@ -33,5 +33,5 @@ export default function useGetUserStore(userId) {
     }
   }, [ userId, navigate ]);
 
-  return { data, isLoading };
+  return [ data, isLoading ];
 }
