@@ -14,8 +14,7 @@ export default function useGetUserStore(userId) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("hook:", "useEffect");
-    return async () => {
+    (async () => {
       try {
         console.log("hook:", userId);
         const userServices = (userId === '10') ? new UserServicesMocked(userId) : new UserServicesAPI(userId);
@@ -34,7 +33,7 @@ export default function useGetUserStore(userId) {
       } catch(error) {
         (error.response.status === 404) && navigate("/notfound");
       }
-    }
+    })();
   }, [ userId, navigate ]);
 
   return [ data, isLoading ];
