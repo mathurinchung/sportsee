@@ -14,6 +14,7 @@ export default function useGetUserStore(userId) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("hook:", "useEffect");
     return async () => {
       try {
         console.log("hook:", userId);
