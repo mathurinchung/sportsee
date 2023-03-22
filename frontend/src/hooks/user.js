@@ -16,7 +16,6 @@ export default function useGetUserStore(userId) {
   useEffect(() => {
     (async () => {
       try {
-        console.log("hook:", userId);
         const userServices = (userId === '10') ? new UserServicesMocked(userId) : new UserServicesAPI(userId);
 
         const store = {
@@ -25,8 +24,6 @@ export default function useGetUserStore(userId) {
           average: await userServices.getUserAverageSessions(),
           performance: await userServices.getUserPerformance()
         };
-
-        console.log("hook", store);
 
         setData(new UserModel(store));
         setIsLoading(false);
