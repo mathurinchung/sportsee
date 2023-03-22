@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  & .App-logo {
+    margin-top: get-vw($desktop-context, 150px);
+  }
 
   & ul {
     display: flex;

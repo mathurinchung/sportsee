@@ -1,0 +1,19 @@
+.ComingSoon {
+  padding-top: get-vw($desktop-context, 169px);
+  text-align: center;
+
+  & h2 {
+    font-size: get-vw($desktop-context, 90px);
+    font-weight: 700;
+    line-height: 142.6%;
+    grid-column-gap: 12;
+  }
+
+  & a {
+    display: inline-block;
+    padding: get-vw($desktop-context, 182px) 0 get-vw($desktop-context, 129px);
+    font-size: get-vw($desktop-context, 18px);
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+}
