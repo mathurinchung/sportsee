@@ -14,10 +14,22 @@ function AverageChart({ data }) {
     <div className="Card AverageChart">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={ data } onMouseMove={""}>
-          <Customized />
+        <text className="content">
+            <tspan x="13%" y="17%">Durée moyenne des</tspan>
+            <tspan x="13%" y="26%">sessions</tspan>
+          </text>
+
           <XAxis dataKey="day" className="xAxis" axisLine={ false } tickLine={ false } tickFormatter={ tickFormatter } />
           <YAxis dataKey="sessionLength" domain={[-15, 'dataMax + 150']} hide />
           <Tooltip content={ renderTooltip } />
+
+          <defs>
+            <linearGradient id="linearGradient" x1="0%" y1="0" x2="100%" y2="0">
+              <stop offset="0%" stopColor="rgba(255, 255, 255, .4032)" />
+              <stop offset="100%" stopColor="rgba(255, 255, 255, 1)" />
+            </linearGradient>
+          </defs>
+
           <Line dataKey="sessionLength" unit="min" type="natural" dot={ false } activeDot={ activeDot } stroke="url(#linearGradient)" strokeWidth={ 2 } />
         </LineChart>
       </ResponsiveContainer>
