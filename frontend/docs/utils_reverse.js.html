@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/Nutrient/NutrientCard.jsx</title>
+    <title>JSDoc: Source: utils/reverse.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/Nutrient/NutrientCard.jsx</h1>
+    <h1 class="page-title">Source: utils/reverse.js</h1>
 
     
 
@@ -26,41 +26,13 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import PropTypes from 'prop-types';
-import { Icon } from '../Assets';
-
-/**
- * NutrientCard is a React functional component that renders a nutrient card with
- * an icon and information about the nutrient.
+            <pre class="prettyprint source linenums"><code>/**
+ * Returns a new array with the elements in reverse order.
  * 
- * @param { Object } props - The component's props.
- * @param { Object } props.data - The nutrient data to be displayed.
- * @param { string } props.data.icon - The icon of the nutrient.
- * @param { number } props.data.value - The value of the nutrient.
- * @param { string } props.data.key - The type of the nutrient.
- * @returns { JSX.Element } A React JSX element that represents the NutrientCard component.
+ * @param { Array } array - The array to be reversed.
+ * @returns { Array } A new array with the elements in reverse order.
  */
-function NutrientCard({ data }) {
-  return (
-    &lt;div className={ `Card NutrientCard ${ data.icon }` }>
-      &lt;div className="icon-nutrient">
-        &lt;Icon className={ `icon-${ data.icon }` } />
-      &lt;/div>
-
-      &lt;div className="info-nutrient">
-        &lt;span className="data-nutrient">{ data.value }&lt;/span>
-        &lt;span className="type-nutrient">{ data.key }&lt;/span>
-      &lt;/div>
-    &lt;/div>
-  );
-}
-
-// Define the prop types for the component
-NutrientCard.propTypes = {
-  data: PropTypes.object.isRequired
-};
-
-export default NutrientCard;</code></pre>
+export const reverseData = array => array.slice(0).reverse();</code></pre>
         </article>
     </section>
 

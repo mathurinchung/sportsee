@@ -1,37 +1,13 @@
 /**
- * The dash pattern used for the CartesianGrid stroke
+ * This function takes a tick string in the format 'YYYY-MM-DD' and returns the day of the month as a string, with leading zeros removed if any.
  * 
- * @type { Array<number> }
+ * @param { string } tick - A string representing a tick in the format 'YYYY-MM-DD'.
+ * @returns { string } - A string representing the day of the month with leading zeros removed if any.
  */
-export const strokeDasharray = [ 1, 1 ];
-
-/**
- * The domain range for the calories YAxis
- * 
- * @type { Array<number | Function> }
- */
-export const caloriesDomain = [ 0, dataMax => Math.round(dataMax + 25) ];
-
-/**
- * The domain range for the kilogram YAxis
- * 
- * @type { Array<Function> }
- */
-export const kilogramDomain = [ dataMin => Math.floor(dataMin - 1), dataMax => Math.round(dataMax + 1) ];
-
-/**
- * The radius for the bars in the BarChart
- * 
- * @type { Array<number> }
- */
-export const barRadius = [ 3, 3, 0, 0 ];
-
-/**
- * The size of the bars in the BarChart
- * 
- * @type { number }
- */
-export const barSize = 7;
+export const tickFormatter = tick => {
+  const day = tick.split('-')[2];
+  return day[0] === '0' ? day[1] : day;
+};
 
 /**
  * Renders the tooltip content for the BarChart

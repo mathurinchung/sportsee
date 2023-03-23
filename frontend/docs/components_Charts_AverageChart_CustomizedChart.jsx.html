@@ -26,7 +26,9 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
+            <pre class="prettyprint source linenums"><code>import { Rectangle } from 'recharts';
+
+/**
  * Array of tick labels for the x-axis
  * 
  * @type { Array&lt;string> }
@@ -38,14 +40,7 @@ const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
  * 
  * @type { Object }
  */
-export const activeDot = { fill: '#fff', strokeWidth: '5px', stroke: 'rgba(255,255,255,.2)' };
-
-/**
- * Event handler for the mouse move event on the chart
- * 
- * @type { Function }
- */
-export const onMouseMove = () => {};
+export const activeDot = { fill: '#fff', strokeWidth: '10', strokeOpacity: '.2', r: 4 };
 
 /**
  * Function to format the tick labels for the x-axis
@@ -68,6 +63,22 @@ export const renderTooltip = ({ payload }) => {
       { payload.map((entry, index) => &lt;li key={ index }>{ entry.value + entry.unit }&lt;/li>) }
     &lt;/ul>
   );
+};
+
+/**
+ * This function renders a custom cursor as a rectangle element using the given points, width and height.
+ * 
+ * @param { Object } props - An object containing the properties required to render the custom cursor.
+ * @param { Array } props.points - An array of objects representing the points to position the cursor.
+ * @param { number } props.width - The width of the cursor.
+ * @param { number } props.height - The height of the cursor.
+ */
+export const CustomCursor = ({ points, width, height }) => {
+  const { x, y } = points[0];
+
+  return (
+    &lt;Rectangle x={ x } y={ y - 74 } width={ width } height={ height + 113 } fill="#000" opacity=".1" />
+  );
 };</code></pre>
         </article>
     </section>
@@ -78,13 +89,13 @@ export const renderTooltip = ({ payload }) => {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#CustomCursor">CustomCursor</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Mar 23 2023 00:52:28 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Mar 23 2023 20:52:03 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

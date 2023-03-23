@@ -81,31 +81,31 @@ const USER_AVERAGE_SESSIONS = [
     sessions: [
       {
         day: 1,
-        sessionLength: 0
+        sessionLength: 45
       },
       {
         day: 2,
-        sessionLength: 180
+        sessionLength: 25
       },
       {
         day: 3,
-        sessionLength: 180
+        sessionLength: 35
       },
       {
         day: 4,
-        sessionLength: 1
+        sessionLength: 15
       },
       {
         day: 5,
-        sessionLength: 1
+        sessionLength: 68
       },
       {
         day: 6,
-        sessionLength: 1
+        sessionLength: 45
       },
       {
         day: 7,
-        sessionLength: 0
+        sessionLength: 15
       }
     ]
   }

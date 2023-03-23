@@ -28,8 +28,7 @@
         <article>
             <pre class="prettyprint source linenums"><code>import PropTypes from 'prop-types';
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
-import { strokeDasharray, caloriesDomain, kilogramDomain, barRadius, barSize,
-         renderTooltip, renderLegend } from './CustomizedChart';
+import { tickFormatter, renderTooltip, renderLegend } from './CustomizedChart';
 /**
  * Renders a bar chart using the recharts library
  * 
@@ -42,14 +41,14 @@ function ActivityChart({ data }) {
     &lt;div className="Card ActivityChart">
       &lt;ResponsiveContainer width="100%" height="100%">
         &lt;BarChart data={ data } >
-          &lt;CartesianGrid vertical={ false } strokeDasharray={ strokeDasharray }/>
-          &lt;XAxis dataKey="day" className="xAxis" tickLine={ false } interval="preserveStartEnd" stroke="#9b9eac" dy={ 14 } />
-          &lt;YAxis dataKey="kilogram" yAxisId="kilogram" domain={ kilogramDomain } className="yAxis" axisLine={ false } tickLine={ false } interval={ 0 } allowDecimals={ false } orientation="right" stroke="#9b9eac" dx={ 31 } />
-          &lt;YAxis dataKey="calories" yAxisId="calories" domain={ caloriesDomain } hide />
-          &lt;Tooltip content={ renderTooltip } />
+          &lt;CartesianGrid vertical={ false } strokeDasharray={[ 1, 1 ]}/>
+          &lt;XAxis dataKey="day" className="xAxis" tickLine={ false } tickFormatter={ tickFormatter } interval="preserveStartEnd" stroke="#9b9eac" dy={ 14 } />
+          &lt;YAxis dataKey="kilogram" yAxisId="kilogram" domain={[ dataMin => Math.floor(dataMin - 1), dataMax => Math.round(dataMax + 1) ]} className="yAxis" axisLine={ false } tickLine={ false } interval={ 0 } allowDecimals={ false } orientation="right" stroke="#9b9eac" dx={ 31 } />
+          &lt;YAxis dataKey="calories" yAxisId="calories" domain={[ 0, dataMax => Math.round(dataMax + 25) ]} hide />
+          &lt;Tooltip wrapperStyle={{ outline: "none" }} content={ renderTooltip } />
           &lt;Legend verticalAlign="top" content={ renderLegend } />
-          &lt;Bar dataKey="kilogram" unit="kg" yAxisId="kilogram" className="bar kilogram" name="Poids (kg)" barSize={ barSize } radius={ barRadius } />
-          &lt;Bar dataKey="calories" unit="kCal" yAxisId="calories" className="bar calories" name="Calories brûlées (kCal)" barSize={ barSize } radius={ barRadius } />
+          &lt;Bar dataKey="kilogram" unit="kg" yAxisId="kilogram" className="bar kilogram" name="Poids (kg)" barSize={ 7 } radius={[ 3, 3, 0, 0 ]} />
+          &lt;Bar dataKey="calories" unit="kCal" yAxisId="calories" className="bar calories" name="Calories brûlées (kCal)" barSize={ 7 } radius={[ 3, 3, 0, 0 ]} />
         &lt;/BarChart>
       &lt;/ResponsiveContainer>
     &lt;/div>
@@ -71,13 +70,13 @@ export default ActivityChart;</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#CustomCursor">CustomCursor</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Mar 23 2023 00:52:28 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Mar 23 2023 20:52:03 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
-import { activeDot, renderTooltip, tickFormatter } from './CustomizedChart';
+import { LineChart, Line, Legend, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { tickFormatter, activeDot, renderTooltip, CustomCursor } from './CustomizedChart';
 
 /**
  * Renders a chart displaying the average session length over time.
@@ -13,16 +13,16 @@ function AverageChart({ data }) {
   return (
     <div className="Card AverageChart">
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={ data } onMouseMove={""}>
+        <LineChart data={ data } margin={{ top: 75, bottom: 10 }}>
           <text className="content">
             <tspan x="13%" y="17%">Durée moyenne des</tspan>
             <tspan x="13%" y="26%">sessions</tspan>
           </text>
 
-          <XAxis dataKey="day" className="xAxis" axisLine={ false } tickLine={ false } tickFormatter={ tickFormatter } />
-          <YAxis dataKey="sessionLength" domain={[-15, 'dataMax + 150']} hide />
+          <XAxis dataKey="day" className="xAxis" padding={{ left: 15, right: 15 }} axisLine={ false } tickLine={ false } tickFormatter={ tickFormatter } />
+          <YAxis dataKey="sessionLength" type="number" domain={[ -20, 'dataMax + 60' ]} hide />
 
-          <Tooltip content={ renderTooltip } />
+          <Tooltip wrapperStyle={{ outline: "none" }} content={ renderTooltip } cursor={ <CustomCursor /> } />
 
           <defs>
             <linearGradient id="linearGradient" x1="0%" y1="0" x2="100%" y2="0">

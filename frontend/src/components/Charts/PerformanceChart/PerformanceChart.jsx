@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import { reverseData, tickFormatter } from './CustomizedChart';
+import { tickFormatter } from './CustomizedChart';
+import { reverseData } from '../../../utils';
 
 /**
  * PerformanceChart is a React component that displays a radar chart

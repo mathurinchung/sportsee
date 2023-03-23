@@ -1,3 +1,5 @@
+import { Rectangle } from 'recharts';
+
 /**
  * Array of tick labels for the x-axis
  * 
@@ -10,14 +12,7 @@ const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
  * 
  * @type { Object }
  */
-export const activeDot = { fill: '#fff', strokeWidth: '5px', stroke: 'rgba(255,255,255,.2)' };
-
-/**
- * Event handler for the mouse move event on the chart
- * 
- * @type { Function }
- */
-export const onMouseMove = () => {};
+export const activeDot = { fill: '#fff', strokeWidth: '10', strokeOpacity: '.2', r: 4 };
 
 /**
  * Function to format the tick labels for the x-axis
@@ -39,5 +34,21 @@ export const renderTooltip = ({ payload }) => {
     <ul className="tooltip">
       { payload.map((entry, index) => <li key={ index }>{ entry.value + entry.unit }</li>) }
     </ul>
+  );
+};
+
+/**
+ * This function renders a custom cursor as a rectangle element using the given points, width and height.
+ * 
+ * @param { Object } props - An object containing the properties required to render the custom cursor.
+ * @param { Array } props.points - An array of objects representing the points to position the cursor.
+ * @param { number } props.width - The width of the cursor.
+ * @param { number } props.height - The height of the cursor.
+ */
+export const CustomCursor = ({ points, width, height }) => {
+  const { x, y } = points[0];
+
+  return (
+    <Rectangle x={ x } y={ y - 74 } width={ width } height={ height + 113 } fill="#000" opacity=".1" />
   );
 };
