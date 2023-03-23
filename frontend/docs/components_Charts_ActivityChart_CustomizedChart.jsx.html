@@ -30,36 +30,42 @@
 
 /**
  * The dash pattern used for the CartesianGrid stroke
+ * 
  * @type { Array&lt;number> }
  */
 export const strokeDasharray = [ getVW(1), getVW(1) ];
 
 /**
  * The domain range for the calories YAxis
+ * 
  * @type { Array&lt;number | Function> }
  */
 export const caloriesDomain = [ 0, dataMax => Math.round(dataMax + 25) ];
 
 /**
  * The domain range for the kilogram YAxis
+ * 
  * @type { Array&lt;Function> }
  */
 export const kilogramDomain = [ dataMin => Math.floor(dataMin - 1), dataMax => Math.round(dataMax + 1) ];
 
 /**
  * The radius for the bars in the BarChart
+ * 
  * @type { Array&lt;number> }
  */
 export const barRadius = [ getVW(3), getVW(3), 0, 0 ];
 
 /**
  * The size of the bars in the BarChart
+ * 
  * @type { number }
  */
 export const barSize = getVW(7);
 
 /**
  * Renders the tooltip content for the BarChart
+ * 
  * @param { Object } param - The object containing the payload and active state
  * @param { Array&lt;Object> } param.payload - The payload of the active point in the BarChart
  * @param { boolean } param.active - The active state of the tooltip
@@ -75,6 +81,7 @@ export const renderTooltip = ({ payload, active }) => {
 
 /**
  * Renders the legend content for the BarChart
+ * 
  * @param { Object } param - The object containing the payload
  * @param { Array&lt;Object> } param.payload - The payload of the BarChart
  * @return { JSX.Element } - The legend content
@@ -99,13 +106,13 @@ export const renderLegend = ({ payload }) => {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Customized">Customized</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 21 2023 10:40:42 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Mar 23 2023 00:52:28 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

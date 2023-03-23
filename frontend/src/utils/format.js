@@ -1,5 +1,6 @@
 /**
  * Formats a number with comma separators.
+ * 
  * @param { number } x - The number to format.
  * @returns { string } The formatted number as a string.
  */

@@ -6,6 +6,8 @@ import { ActivityChart, AverageChart, PerformanceChart, ScoreChart } from '../co
 import { NutrientGroup } from '../components/Nutrient';
 
 /**
+ * React component for the "Profile" page.
+ *
  * @function
  * @name Profile
  * @returns { JSX.Element } React component

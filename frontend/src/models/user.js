@@ -33,7 +33,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#id
-   * @returns {string} The ID of the user.
+   * @returns { string } The ID of the user.
    */
   get id() { return this._id; }
 
@@ -42,7 +42,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#userInfos
-   * @returns {Object} The information of the user.
+   * @returns { Object } The information of the user.
    */
   get userInfos() { return this._userInfos; }
 
@@ -51,7 +51,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#score
-   * @returns {number} The score of the user.
+   * @returns { number } The score of the user.
    */
   get score() { return this._score; }
 
@@ -60,7 +60,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#keyData
-   * @returns {Object} The key data of the user.
+   * @returns { Object } The key data of the user.
    */
   get keyData() { return this._keyData; }
 
@@ -69,7 +69,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#activitySessions
-   * @returns {Object[]} The activity sessions of the user.
+   * @returns { Object[] } The activity sessions of the user.
    */
   get activitySessions() { return this._activitySessions; }
 
@@ -78,7 +78,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#averageSessions
-   * @returns {Object[]} The average sessions of the user.
+   * @returns { Object[] } The average sessions of the user.
    */
   get averageSessions() { return this._averageSessions; }
 
@@ -87,7 +87,7 @@ export default class UserModel {
    *
    * @function
    * @name UserModel#performance
-   * @returns {Object[]} The performance data of the user.
+   * @returns { Object[] } The performance data of the user.
    */
   get performance() { return this._performance };
 }

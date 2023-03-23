@@ -28,10 +28,10 @@
         <article>
             <pre class="prettyprint source linenums"><code>import PropTypes from 'prop-types';
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import { Customized } from './CustomizedChart';
 
 /**
  * ScoreChart is a React component that displays a radial bar chart
+ * 
  * using the Recharts library.
  * @param {Object} props - The component's props.
  * @param {Object} props.data - An object that contains a score property to be displayed on the chart.
@@ -41,9 +41,18 @@ function ScoreChart({ data }) {
     &lt;div className="Card ScoreChart">
       &lt;ResponsiveContainer width="100%" height="100%">
         &lt;RadialBarChart cx="50%" cy="50%" innerRadius="90%" outerRadius="90%" startAngle={212} endAngle={-212} barSize={10} data={[ data ]}>
-          &lt;Customized score={ data.score } />
+          &lt;text className="title" x="0" y="7%">Score&lt;/text>
+
           &lt;PolarAngleAxis type="number" domain={[0, 1]} tick={false} />
           &lt;RadialBar dataKey="score" cornerRadius="5" fill="#ff0000" />
+
+          &lt;circle cx="50%" cy="50%" r="40%" fill="#fff">&lt;/circle>
+
+          &lt;text className="content">
+            &lt;tspan className="percent" x="38.5%" y="49%">{ `${ data.score * 100 }%` }&lt;/tspan>
+            &lt;tspan x="36%" y="62%">de votre&lt;/tspan>
+            &lt;tspan x="37%" y="74%">objectif&lt;/tspan>
+          &lt;/text>
         &lt;/RadialBarChart>
       &lt;/ResponsiveContainer>
     &lt;/div>
@@ -67,13 +76,13 @@ export default ScoreChart;</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Customized">Customized</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#barRadius">barRadius</a></li><li><a href="global.html#barSize">barSize</a></li><li><a href="global.html#caloriesDomain">caloriesDomain</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#getVW">getVW</a></li><li><a href="global.html#kilogramDomain">kilogramDomain</a></li><li><a href="global.html#onMouseMove">onMouseMove</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseData">reverseData</a></li><li><a href="global.html#strokeDasharray">strokeDasharray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 21 2023 10:40:42 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Mar 23 2023 00:52:28 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

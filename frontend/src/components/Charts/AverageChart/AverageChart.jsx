@@ -21,6 +21,7 @@ function AverageChart({ data }) {
 
           <XAxis dataKey="day" className="xAxis" axisLine={ false } tickLine={ false } tickFormatter={ tickFormatter } />
           <YAxis dataKey="sessionLength" domain={[-15, 'dataMax + 150']} hide />
+
           <Tooltip content={ renderTooltip } />
 
           <defs>

@@ -3,6 +3,7 @@ import { Icon } from '../Assets';
 
 /**
  * A React functional component representing the sidebar section of the web application.
+ * 
  * @function
  * @returns { JSX.Element } JSX element representing the sidebar section.
  */

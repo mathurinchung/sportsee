@@ -3,6 +3,7 @@ import mock from '../__mocks__/user';
 
 /**
  * Represents a UserServicesAPI.
+ * 
  * @constructor
  * @param { string } userId - The user ID.
  */
@@ -48,6 +49,7 @@ export class UserServicesAPI {
 
 /**
  * Represents a UserServicesMocked.
+ * 
  * @constructor
  * @param { string } userId - The user ID.
  */
