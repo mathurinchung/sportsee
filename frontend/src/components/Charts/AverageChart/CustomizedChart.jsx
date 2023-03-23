@@ -5,7 +5,7 @@ import { Rectangle } from 'recharts';
  * 
  * @type { Array<string> }
  */
-const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
+export const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
 
 /**
  * Styles for the active dot in the chart
@@ -13,15 +13,6 @@ const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
  * @type { Object }
  */
 export const activeDot = { fill: '#fff', strokeWidth: '10', strokeOpacity: '.2', r: 4 };
-
-/**
- * Function to format the tick labels for the x-axis
- * 
- * @param { number } tick - The numeric value of the tick
- * @returns { string } - The formatted tick label
- */
-export const tickFormatter = tick => ticks[tick - 1]
-
 
 /**
  * Function to render the tooltip in the chart

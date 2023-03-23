@@ -1,2 +1,3 @@
 export { formatNumber } from './format';
-export { reverseData } from './reverse';
+export { reverseArray } from './reverse';
+export { newArray } from './newarray';

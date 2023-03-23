@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { tickFormatter } from './CustomizedChart';
-import { reverseData } from '../../../utils';
+import { reverseArray } from '../../../utils';
 
 /**
  * PerformanceChart is a React component that displays a radar chart
@@ -15,7 +15,7 @@ function PerformanceChart({ data }) {
   return (
     <div className="Card PerformanceChart">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={ reverseData(data) } outerRadius="72.5%">
+        <RadarChart data={ reverseArray(data) } outerRadius="72.5%">
           <PolarGrid radialLines={ false } />
           <PolarAngleAxis dataKey="kind" tick={{ dy: 4 }} tickLine={ false } tickFormatter={ tickFormatter } />
           <PolarRadiusAxis axisLine={ false } tick={ false } tickCount={ 6 } domain={[ 0, 250 ]} />
