@@ -1,11 +1,9 @@
-import { getVW } from '../../../utils';
-
 /**
  * The dash pattern used for the CartesianGrid stroke
  * 
  * @type { Array<number> }
  */
-export const strokeDasharray = [ getVW(1), getVW(1) ];
+export const strokeDasharray = [ 1, 1 ];
 
 /**
  * The domain range for the calories YAxis
@@ -26,14 +24,14 @@ export const kilogramDomain = [ dataMin => Math.floor(dataMin - 1), dataMax => M
  * 
  * @type { Array<number> }
  */
-export const barRadius = [ getVW(3), getVW(3), 0, 0 ];
+export const barRadius = [ 3, 3, 0, 0 ];
 
 /**
  * The size of the bars in the BarChart
  * 
  * @type { number }
  */
-export const barSize = getVW(7);
+export const barSize = 7;
 
 /**
  * Renders the tooltip content for the BarChart

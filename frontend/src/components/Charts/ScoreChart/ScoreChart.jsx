@@ -12,10 +12,10 @@ function ScoreChart({ data }) {
   return (
     <div className="Card ScoreChart">
       <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart cx="50%" cy="50%" innerRadius="90%" outerRadius="90%" startAngle={212} endAngle={-212} barSize={10} data={[ data ]}>
+        <RadialBarChart cx="50%" cy="50%" innerRadius="90%" outerRadius="90%" startAngle={ 212 } endAngle={ -212 } barSize={ 10 } data={[ data ]}>
           <text className="title" x="0" y="7%">Score</text>
 
-          <PolarAngleAxis type="number" domain={[0, 1]} tick={false} />
+          <PolarAngleAxis type="number" domain={[0, 1]} tick={ false } />
           <RadialBar dataKey="score" cornerRadius="5" fill="#ff0000" />
 
           <circle cx="50%" cy="50%" r="40%" fill="#fff"></circle>
