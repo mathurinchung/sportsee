@@ -14,7 +14,7 @@ function ActivityChart({ data }) {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={ data } >
           <CartesianGrid vertical={ false } strokeDasharray={[ 1, 1 ]}/>
-          <XAxis dataKey="day" className="xAxis" tickLine={ false } tickFormatter={ tickFormatter } interval="preserveStartEnd" stroke="#9b9eac" dy={ 14 } />
+          <XAxis dataKey="day" className="xAxis" tickLine={ false } tickFormatter={ tickFormatter } stroke="#9b9eac" dy={ 14 } />
           <YAxis dataKey="kilogram" yAxisId="kilogram" domain={[ dataMin => Math.floor(dataMin - 1), dataMax => Math.round(dataMax + 1) ]} className="yAxis" axisLine={ false } tickLine={ false } interval={ 0 } allowDecimals={ false } orientation="right" stroke="#9b9eac" dx={ 31 } />
           <YAxis dataKey="calories" yAxisId="calories" domain={[ 0, dataMax => Math.round(dataMax + 25) ]} hide />
           <Tooltip wrapperStyle={{ outline: "none" }} content={ renderTooltip } />
