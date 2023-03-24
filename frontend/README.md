@@ -18,6 +18,16 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 - The `yarn dev` command will allow you to run the micro API.
 - Go to http://localhost:4200 in your favorite Web browser
 
+### 1.3 Environment Variables
+
+To use the micro API with the user interface, you need to follow the following steps:
+
+- Copy the `.env.example` file and rename it to `.env`.
+- Open the `.env` file and add the following line: `VITE_API_URL="http://localhost:3000"`.  
+  This sets the `VITE_API_URL` environment variable to the URL of your micro API. If your micro API is running at a different URL, replace http://localhost:3000 with the appropriate URL.
+- Save the .env file.
+- Restart the server by pressing `h` then `r`.
+
 ## 2. Documentation
 
 The JSDOC documentation can be found in the `docs` folder. This documentation provides detailed information on each component, directive, and service used in the project. It can be helpful for developers who want to contribute or understand the internal workings of the application.
