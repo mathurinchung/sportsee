@@ -13,7 +13,7 @@ import { NutrientGroup } from '../components/Nutrient';
  * @returns { JSX.Element } React component
  */
 function Profile() {
-  const { userId } = useParams();
+  const { id } = useParams();
 
   /**
    * User data retrieved from the server.
@@ -43,7 +43,7 @@ function Profile() {
    * @returns { UserStore } User data and loading status.
    */
 
-  const [ data, isLoading ] = useGetUserStore(userId);
+  const [ data, isLoading ] = useGetUserStore(id);
 
   return !isLoading && (
     <Main className="Profile">

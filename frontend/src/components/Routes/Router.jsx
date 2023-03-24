@@ -10,7 +10,7 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={ <Home /> } />
-      <Route path="/profile/:userId" element={ <Profile /> } />
+      <Route path="/user/:id" element={ <Profile /> } />
       <Route path="/settings" element={ <Navigate to="/coming" /> } />
       <Route path="/community" element={ <Navigate to="/coming" /> } />
 

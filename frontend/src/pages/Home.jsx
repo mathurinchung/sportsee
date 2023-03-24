@@ -15,9 +15,9 @@ function Home() {
       <img src={ logo } className="App-logo" alt="logo" />
 
       <ul>
-        <li><Link to="/profile/10">Thomas (Mock)</Link></li>
-        <li><Link to="/profile/12">Karl (API)</Link></li>
-        <li><Link to="/profile/18">Cecilia (API)</Link></li>
+        <li><Link to="/user/10">Thomas (Mock)</Link></li>
+        <li><Link to="/user/12">Karl (API)</Link></li>
+        <li><Link to="/user/18">Cecilia (API)</Link></li>
       </ul>
     </Main>
   );
