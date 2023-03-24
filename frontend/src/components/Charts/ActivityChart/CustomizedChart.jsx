@@ -4,10 +4,7 @@
  * @param { string } tick - A string representing a tick in the format 'YYYY-MM-DD'.
  * @returns { string } - A string representing the day of the month with leading zeros removed if any.
  */
-export const tickFormatter = tick => {
-  const day = tick.split('-')[2];
-  return day[0] === '0' ? day[1] : day;
-};
+export const tickFormatter = (tick, index) => index + 1;
 
 /**
  * Renders the tooltip content for the BarChart

@@ -12,10 +12,12 @@ import { reverseArray } from '../../../utils';
  * @returns { JSX.Element } A React JSX element that represents the PerformanceChart component.
  */
 function PerformanceChart({ data }) {
+  const reverseData = reverseArray(data);
+
   return (
     <div className="Card PerformanceChart">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={ reverseArray(data) } outerRadius="72.5%">
+        <RadarChart data={ reverseData } outerRadius="72.5%">
           <PolarGrid radialLines={ false } />
           <PolarAngleAxis dataKey="kind" tick={{ dy: 4 }} tickLine={ false } tickFormatter={ tickFormatter } />
           <PolarRadiusAxis axisLine={ false } tick={ false } tickCount={ 6 } domain={[ 0, 250 ]} />
