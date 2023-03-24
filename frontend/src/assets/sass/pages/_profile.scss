@@ -1,1 +1,10 @@
-// .Profile {}
+.Profile {
+  display: flex;
+  height: get-vw($desktop-context, 933px);;
+}
+
+@media screen and (max-width: 1024px) {
+  .Profile {
+    height: get-vw($tablet-context, 715px);;
+  }
+}
