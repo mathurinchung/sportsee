@@ -15,7 +15,7 @@ function Header() {
 
       <Nav>
         <li><NavLink to="/">Accueil</NavLink></li>
-        <li><NavLink to="/user">Profile</NavLink></li>
+        <li><NavLink to="/user">Profil</NavLink></li>
         <li><NavLink to="/settings">Réglage</NavLink></li>
         <li><NavLink to="/community">Communauté</NavLink></li>
       </Nav>
