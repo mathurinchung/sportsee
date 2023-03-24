@@ -5,7 +5,7 @@ import { Rectangle } from 'recharts';
  * 
  * @type { Array<string> }
  */
-export const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
+const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
 
 /**
  * Styles for the active dot in the chart
@@ -13,6 +13,14 @@ export const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
  * @type { Object }
  */
 export const activeDot = { fill: '#fff', strokeWidth: '10', strokeOpacity: '.2', r: 4 };
+
+/**
+ * Returns a tick formatting function for a given data array.
+ *
+ * @param { Array } data - The data array to be formatted.
+ * @returns { Function } A tick formatting function.
+ */
+export const tickFormatter = data => (tick, index) => (index === 0 || index === data.length - 1) ? '' : ticks[tick - 1];
 
 /**
  * Function to render the tooltip in the chart

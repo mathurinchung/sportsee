@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { ticks, activeDot, renderTooltip, CustomCursor } from './CustomizedChart';
+import { activeDot, tickFormatter, renderTooltip, CustomCursor } from './CustomizedChart';
 import { newArray } from '../../../utils';
 
 /**
@@ -22,7 +22,7 @@ function AverageChart({ data }) {
             <tspan x="13%" y="26%">sessions</tspan>
           </text>
 
-          <XAxis dataKey="day" className="xAxis" axisLine={ false } tickLine={ false } tickFormatter={ (tick, index) => (index === 0 || index === newData.length - 1) ? '' : ticks[tick - 1] } />
+          <XAxis dataKey="day" className="xAxis" axisLine={ false } tickLine={ false } tickFormatter={ tickFormatter(newData) } />
           <YAxis dataKey="sessionLength" type="number" domain={[ -20, 'dataMax + 60' ]} hide />
 
           <Tooltip wrapperStyle={{ outline: "none" }} content={ renderTooltip } cursor={ <CustomCursor /> } />
