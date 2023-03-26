@@ -23,6 +23,15 @@
         width: get-vw($desktop-context, 64px);
         height: get-vw($desktop-context, 64px);
         background-color: #fff;
+        transition: .5s ease-in-out;
+
+        &:hover {
+          background-color: #ff0101;
+
+          & i {
+            background-color: #fff;
+          }
+        }
       }
     }
   }
