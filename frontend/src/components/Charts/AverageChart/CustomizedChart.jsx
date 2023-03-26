@@ -58,7 +58,7 @@ export const renderDot = data => {
     if (index === 0 || index === data.length - 1) return null;
 
     return (
-      <circle cx={ cx } cy={ cy } r={ 4 } fill="#fff" strokeWidth={ 10 } strokeOpacity={ .2 } />
+      <circle cx={ cx } cy={ cy } r={ 5 } fill="#fff" stroke="#fff" strokeWidth={ 10 } strokeOpacity={ .2 } />
     );
   };
 };
