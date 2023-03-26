@@ -31,92 +31,74 @@ import mock from '../__mocks__/user';
 
 /**
  * Represents a UserServicesAPI.
- * 
+ *
  * @constructor
  * @param { string } userId - The user ID.
  */
 export class UserServicesAPI {
   constructor(userId) {
-    /**
-     * The user ID.
-     * @type { string }
-     */
     this.userId = userId;
-
-    /**
-     * The API instance.
-     * @type { Api }
-     */
-    this.api = new Api();
+    this.api = new Api(); // The API instance
   }
 
   /**
    * Retrieves the main data for the user.
-   * @returns {Promise&lt;ApiEntity>} A promise that resolves with the user's main data.
+   * @returns { Promise&lt;ApiEntity> } A promise that resolves with the user's main data.
    */
   getUserMainData = () => new ApiEntity({ key: 'user', api: this.api }).select({ selector: this.userId });
 
   /**
    * Retrieves the user's activity.
-   * @returns {Promise&lt;ApiEntity>} A promise that resolves with the user's activity.
+   * @returns { Promise&lt;ApiEntity> } A promise that resolves with the user's activity.
    */
   getUserActivity = () => new ApiEntity({ key: 'user',api: this.api }).select({ selector: `${this.userId}/activity` });
 
   /**
    * Retrieves the user's average sessions.
-   * @returns {Promise&lt;ApiEntity>} A promise that resolves with the user's average sessions.
+   * @returns { Promise&lt;ApiEntity> } A promise that resolves with the user's average sessions.
    */
   getUserAverageSessions = () => new ApiEntity({ key: 'user',api: this.api }).select({ selector: `${this.userId}/average-sessions` });
 
   /**
    * Retrieves the user's performance.
-   * @returns {Promise&lt;ApiEntity>} A promise that resolves with the user's performance.
+   * @returns { Promise&lt;ApiEntity> } A promise that resolves with the user's performance.
    */
   getUserPerformance = () => new ApiEntity({ key: 'user',api: this.api }).select({ selector: `${this.userId}/performance` });
 }
 
 /**
  * Represents a UserServicesMocked.
- * 
+ *
  * @constructor
  * @param { string } userId - The user ID.
  */
 export class UserServicesMocked {
   constructor(userId) {
-    /**
-     * The user ID.
-     * @type {string}
-     */
     this.userId = userId;
-
-    /**
-     * The mock data.
-     * @type {Object}
-     */
-    this.mock = mock;
+    this.mock = mock; // The Mock data
   }
 
   /**
    * Retrieves the main data for the user from the mock data.
-   * @returns {Promise&lt;Object>} A promise that resolves with the user's main data.
+   * @returns { Promise&lt;Object> } A promise that resolves with the user's main data.
    */
   getUserMainData = () => Promise.resolve(this.mock['USER_MAIN_DATA'].find(user => user.id === parseInt(this.userId)));
 
   /**
    * Retrieves the user's activity from the mock data.
-   * @returns {Promise&lt;Object>} A promise that resolves with the user's activity.
+   * @returns { Promise&lt;Object> } A promise that resolves with the user's activity.
    */
   getUserActivity = () => Promise.resolve(this.mock['USER_ACTIVITY'].find(user => user.userId === parseInt(this.userId)));
 
   /**
    * Retrieves the user's average sessions from the mock data.
-   * @returns {Promise&lt;Object>} A promise that resolves with the user's average sessions.
+   * @returns { Promise&lt;Object> } A promise that resolves with the user's average sessions.
    */
   getUserAverageSessions = () => Promise.resolve(this.mock['USER_AVERAGE_SESSIONS'].find(user => user.userId === parseInt(this.userId)));
 
   /**
    * Retrieves the user's performance from the mock data.
-   * @returns {Promise&lt;Object>} A promise that resolves with the user's performance.
+   * @returns { Promise&lt;Object> } A promise that resolves with the user's performance.
    */
   getUserPerformance = () => Promise.resolve(this.mock['USER_PERFORMANCE'].find(user => user.userId === parseInt(this.userId)));
 }</code></pre>
@@ -129,13 +111,13 @@ export class UserServicesMocked {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#CustomCursor">CustomCursor</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#newArray">newArray</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseArray">reverseArray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li><li><a href="global.html#useGetUserStore">useGetUserStore</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Api.html">Api</a></li><li><a href="ApiEntity.html">ApiEntity</a></li><li><a href="UserModel.html">UserModel</a></li><li><a href="UserServicesAPI.html">UserServicesAPI</a></li><li><a href="UserServicesMocked.html">UserServicesMocked</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#ComingSoon">ComingSoon</a></li><li><a href="global.html#CustomCursor">CustomCursor</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderProfile">HeaderProfile</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Main">Main</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#NutrientCard">NutrientCard</a></li><li><a href="global.html#NutrientGroup">NutrientGroup</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Router">Router</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#activeDot">activeDot</a></li><li><a href="global.html#config">config</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#newArray">newArray</a></li><li><a href="global.html#renderLegend">renderLegend</a></li><li><a href="global.html#renderTooltip">renderTooltip</a></li><li><a href="global.html#reverseArray">reverseArray</a></li><li><a href="global.html#tickFormatter">tickFormatter</a></li><li><a href="global.html#ticks">ticks</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Fri Mar 24 2023 02:55:00 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Mar 26 2023 04:06:34 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
