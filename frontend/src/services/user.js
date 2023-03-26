@@ -45,7 +45,8 @@ export class UserServicesAPI {
  * @param { string } userId - The user ID.
  */
 export class UserServicesMocked {
-  constructor(userId) {rId = userId;
+  constructor(userId) {
+    this.userId = userId;
     this.mock = mock; // The Mock data
   }
 
