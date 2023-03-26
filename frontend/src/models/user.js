@@ -4,18 +4,6 @@
  * @class
  * @name UserModel
  * @param { Object } data - The data object to be used to initialize the model.
- * @param { Object } data.user - The user data.
- * @param { string } data.user.id - The user's ID.
- * @param { Object } data.user.userInfos - The user's information.
- * @param { number } data.user.todayScore - The user's score for the day.
- * @param { number } data.user.score - The user's overall score.
- * @param { Object } data.user.keyData - The user's key data.
- * @param { Object } data.activity - The activity data.
- * @param { Object[] } data.activity.sessions - The activity sessions.
- * @param { Object } data.average - The average data.
- * @param { Object[] } data.average.sessions - The average sessions.
- * @param { Object } data.performance - The performance data.
- * @param { Object[] } data.performance.data - The performance data.
  */
 export default class UserModel {
   constructor(data) {

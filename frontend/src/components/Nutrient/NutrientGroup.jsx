@@ -4,15 +4,14 @@ import NutrientCard from './NutrientCard';
 
 /**
  * A component that displays a group of nutrient cards for given nutrient data.
- * 
- * @param { Object } props - The component props.
+ *
  * @param { Object } props.data - An object containing nutrient data.
  * @returns { JSX.Element } - The JSX element for rendering the component.
  */
 function NutrientGroup({ data }) {
   /**
    * Maps each nutrient key to a corresponding nutrient card data object.
-   * 
+   *
    * @function
    * @param { string } key - The nutrient key.
    * @returns { Object } - The nutrient card data object.

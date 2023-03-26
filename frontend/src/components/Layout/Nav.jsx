@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 
 /**
  * A React functional component representing the navigation menu of the web application.
- * 
+ *
  * @function
- * @param { object } props - The props object containing children property.
  * @param { array } props.children - The child components to be rendered within the navigation menu.
  * @returns { JSX.Element } JSX element representing the navigation menu.
  */

@@ -3,9 +3,8 @@ import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from '
 
 /**
  * ScoreChart is a React component that displays a radial bar chart
- * 
  * using the Recharts library.
- * @param { Object } props - The component's props.
+ *
  * @param { Object } props.data - An object that contains a score property to be displayed on the chart.
  */
 function ScoreChart({ data }) {
@@ -31,9 +30,7 @@ function ScoreChart({ data }) {
   );
 }
 
-/**
- * An object that contains a score property to be displayed on the chart.
- */
+// An object that contains a score property to be displayed on the chart.
 ScoreChart.propTypes = {
   data: PropTypes.object.isRequired
 };

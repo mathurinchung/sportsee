@@ -3,7 +3,7 @@ import { Home, Profile, ComingSoon, NotFound } from '../../pages';
 
 /**
  * Renders the app's routing configuration using React Router
- * 
+ *
  * @return { JSX.Element } - The rendered router
  */
 function Router() {

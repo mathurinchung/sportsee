@@ -2,14 +2,14 @@ import { Rectangle } from 'recharts';
 
 /**
  * Array of tick labels for the x-axis
- * 
+ *
  * @type { Array<string> }
  */
 const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
 
 /**
  * Styles for the active dot in the chart
- * 
+ *
  * @type { Object }
  */
 export const activeDot = { fill: '#fff', strokeWidth: '10', strokeOpacity: '.2', r: 4 };
@@ -24,7 +24,7 @@ export const tickFormatter = data => (tick, index) => (index === 0 || index === 
 
 /**
  * Function to render the tooltip in the chart
- * 
+ *
  * @param { Object } payload - The payload object containing data for the tooltip
  * @returns { JSX.Element } - The rendered tooltip
  */
@@ -38,8 +38,7 @@ export const renderTooltip = ({ payload }) => {
 
 /**
  * This function renders a custom cursor as a rectangle element using the given points, width and height.
- * 
- * @param { Object } props - An object containing the properties required to render the custom cursor.
+ *
  * @param { Array } props.points - An array of objects representing the points to position the cursor.
  * @param { number } props.width - The width of the cursor.
  * @param { number } props.height - The height of the cursor.

@@ -5,9 +5,8 @@ import { reverseArray } from '../../../utils';
 
 /**
  * PerformanceChart is a React component that displays a radar chart
- * 
  * using the Recharts library.
- * @param { Object } props - The component's props.
+ *
  * @param { Array } props.data - An array of data to be displayed on the chart.
  * @returns { JSX.Element } A React JSX element that represents the PerformanceChart component.
  */
@@ -28,9 +27,7 @@ function PerformanceChart({ data }) {
   );
 }
 
-/**
- * An array of data to be displayed on the chart.
- */
+// An array of data to be displayed on the chart.
 PerformanceChart.propTypes = {
   data: PropTypes.array.isRequired
 };

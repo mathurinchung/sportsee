@@ -5,8 +5,7 @@ import { newArray } from '../../../utils';
 
 /**
  * Renders a chart displaying the average session length over time.
- * 
- * @param { object } props - The component props.
+ *
  * @param { Array } props.data - An array of data points for the chart.
  * @returns { JSX.Element } - The rendered component.
  */

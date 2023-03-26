@@ -4,8 +4,7 @@ import { Icon } from '../Assets';
 /**
  * NutrientCard is a React functional component that renders a nutrient card with
  * an icon and information about the nutrient.
- * 
- * @param { Object } props - The component's props.
+ *
  * @param { Object } props.data - The nutrient data to be displayed.
  * @param { string } props.data.icon - The icon of the nutrient.
  * @param { number } props.data.value - The value of the nutrient.

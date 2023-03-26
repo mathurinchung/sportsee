@@ -3,8 +3,7 @@ import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Le
 import { tickFormatter, renderTooltip, renderLegend } from './CustomizedChart';
 /**
  * Renders a bar chart using the recharts library
- * 
- * @param { Object } props - The component props
+ *
  * @param { Array } props.data - An array of objects containing the data to be displayed on the chart
  * @return { JSX.Element } - The rendered chart
  */
