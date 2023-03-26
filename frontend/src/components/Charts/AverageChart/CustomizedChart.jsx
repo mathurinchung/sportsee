@@ -8,13 +8,6 @@ import { Rectangle } from 'recharts';
 const ticks = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D' ];
 
 /**
- * Styles for the active dot in the chart
- *
- * @type { Object }
- */
-export const activeDot = { fill: '#fff', strokeWidth: '10', strokeOpacity: '.2', r: 4 };
-
-/**
  * Returns a tick formatting function for a given data array.
  *
  * @param { Array } data - The data array to be formatted.
@@ -25,13 +18,20 @@ export const tickFormatter = data => (tick, index) => (index === 0 || index === 
 /**
  * Function to render the tooltip in the chart
  *
+ * @param { boolean } active - Whether the tooltip is active or not.
  * @param { Object } payload - The payload object containing data for the tooltip
  * @returns { JSX.Element } - The rendered tooltip
  */
-export const renderTooltip = ({ payload }) => {
-  return (
+export const renderTooltip = ({ active, payload }) => {
+  if (active && payload[0].payload.type === 'fictional') return null;
+
+  return active && (
     <ul className="tooltip">
-      { payload.map((entry, index) => <li key={ index }>{ entry.value + entry.unit }</li>) }
+    {
+      payload.map((entry, index) => {
+        return <li key={ index }>{ entry.value + entry.unit }</li>
+      })
+    }
     </ul>
   );
 };
@@ -49,4 +49,20 @@ export const CustomCursor = ({ points, width, height }) => {
   return (
     <Rectangle x={ x } y={ y - 74 } width={ width } height={ height + 113 } fill="#000" opacity=".1" />
   );
+};
+
+/**
+ * Renders a dot for a chart.
+ * 
+ * @param { Array } data - The data for the chart.
+ * @returns { Function } A function that renders a dot for a specific data point.
+ */
+export const renderDot = data => {
+  return ({ cx, cy, index }) => {
+    if (index === 0 || index === data.length - 1) return null;
+
+    return (
+      <circle cx={ cx } cy={ cy } r={ 4 } fill="#fff" strokeWidth={ 10 } strokeOpacity={ .2 } />
+    );
+  };
 };

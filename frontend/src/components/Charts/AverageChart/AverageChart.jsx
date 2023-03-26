@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { activeDot, tickFormatter, renderTooltip, CustomCursor } from './CustomizedChart';
+import { tickFormatter, renderTooltip, CustomCursor, renderDot } from './CustomizedChart';
 import { newArray } from '../../../utils';
 
 /**
@@ -33,7 +33,7 @@ function AverageChart({ data }) {
             </linearGradient>
           </defs>
 
-          <Line dataKey="sessionLength" unit="min" type="natural" dot={ false } activeDot={ activeDot } stroke="url(#linearGradient)" strokeWidth={ 2 } />
+          <Line dataKey="sessionLength" unit="min" type="natural" dot={ false } activeDot={ renderDot(newData) } stroke="url(#linearGradient)" strokeWidth={ 2 } />
         </LineChart>
       </ResponsiveContainer>
     </div>

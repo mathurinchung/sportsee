@@ -5,4 +5,4 @@
  * @param { Array } data - The original array to modify.
  * @returns { Array } - A new array with the modified elements.
  */
-export const newArray = array => [ array[array.length - 1], ...array, array[0] ];
+export const newArray = array => [ { type: 'fictional', ...array[array.length - 1] }, ...array, { type: 'fictional', ...array[0] } ];
