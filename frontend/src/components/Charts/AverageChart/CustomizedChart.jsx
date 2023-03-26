@@ -23,17 +23,13 @@ export const tickFormatter = data => (tick, index) => (index === 0 || index === 
  * @returns { JSX.Element } - The rendered tooltip
  */
 export const renderTooltip = ({ active, payload }) => {
-  if (active && payload[0].payload.type === 'fictional') return null;
-
-  return active && (
-    <ul className="tooltip">
-    {
-      payload.map((entry, index) => {
-        return <li key={ index }>{ entry.value + entry.unit }</li>
-      })
-    }
-    </ul>
-  );
+  return active && payload.map((entry, index) => {
+    return (entry.payload.type === 'fictional') ? null : (
+      <ul key={ index } className="tooltip">
+        <li>{ entry.value + entry.unit }</li>
+      </ul>
+    );
+  });
 };
 
 /**
