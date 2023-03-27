@@ -29,7 +29,7 @@ export default function useGetUserStore(userId) {
         setData(new UserModel(store));
         setIsLoading(false);
       } catch(error) {
-        (error.response.status === 404) && navigate("/notfound");
+        error && navigate("/notfound");
       }
     })();
   }, [ userId, navigate ]);
