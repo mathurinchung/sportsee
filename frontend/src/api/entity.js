@@ -3,24 +3,12 @@
  *
  * @class
  * @name ApiEntity
- * @param { Object } params - Initialization parameters.
  * @param { string } params.key - The key associated with the entity.
  * @param { axios.AxiosInstance } params.api - The Axios instance used to make API requests.
  */
 export class ApiEntity {
   constructor({ key, api }) {
-    /**
-     * The key associated with the entity.
-     *
-     * @type { string }
-     */
     this.key = key;
-
-    /**
-     * The Axios instance used to make API requests.
-     *
-     * @type { axios.AxiosInstance }
-     */
     this.api = api
   }
 
